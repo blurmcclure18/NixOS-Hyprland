@@ -102,11 +102,11 @@
 
    nixpkgs.config = {
     allowUnfree = true;
-    packageOverrides = pkgs: {
-      unstable = import <nixos-unstable> {
-		config = { allowUnfree = true; };
-	  		};
-    	};
+    #packageOverrides = pkgs: {
+    #  unstable = import <nixos-unstable> {
+	#	config = { allowUnfree = true; };
+	#  		};
+    #	};
 	};
 
   # List packages installed in system profile.
@@ -120,13 +120,14 @@
      kitty
      neovim
      openconnect
-     thunar
+     pavucontrol
+	 thunar
      vim
      vmware-horizon-client
      walker
      waybar
      wget
-     unstable.wiremix
+     #unstable.wiremix
      wlogout
      yazi
    ];
