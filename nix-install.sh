@@ -57,9 +57,6 @@ cp ./configuration.nix /mnt/etc/nixos/
 echo "⚙️ Generating hardware-configuration.nix..."
 nixos-generate-config --root /mnt
 
-# === Optional: Patch hostname into config (optional if you're hardcoding it) ===
-echo "ℹ️ NOTE: You will need to set networking.hostName = \"$HOSTNAME\" in your configuration.nix if not already present."
-
 # === Install ===
 echo "📦 Installing NixOS..."
 nixos-install --no-root-passwd
