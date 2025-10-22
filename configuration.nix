@@ -136,11 +136,11 @@
 
    nixpkgs.config = {
     allowUnfree = true;
-    packageOverrides = pkgs: {
-      unstable = import <nixos-unstable> {
-		config = { allowUnfree = true; };
-	  		};
-    	};
+    #packageOverrides = pkgs: {
+      #unstable = import <nixos-unstable> {
+		#config = { allowUnfree = true; };
+	  		#};
+    	#};
 	};
 
 	fonts.packages = with pkgs; [
@@ -184,7 +184,7 @@
      walker
      waybar
      wget
-     unstable.wiremix
+     #unstable.wiremix
 	 unzip
 	 wl-clipboard
      wlogout
