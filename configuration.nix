@@ -40,10 +40,32 @@
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
+  # Enable Systemd-logind to manage power events
+  services.logind = {
+
+  # Default behavior - suspend when closed
+  lidSwitch = "suspend";
+
+  # Don't suspend when external monitor (dock) is active
+  lidSwitchDocked = "ignore";
+
+  # When user is idle and closes lid, same as lidSwitch
+  lidSwitchExternalPower = "suspend";
+  };
+
+  # Enable acpid service
+  services.acpid.enable = true;
+
    networking.hostName = "test-nixos"; # Define your hostname.
   # Pick only one of the below networking options.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
-   networking.networkmanager.enable = true;  # Easiest to use and most distros use this by default.
+   networking.networkmanager = {
+		enable = true;  # Easiest to use and most distros use this by default.
+		wifi = {
+			backend = "iwd";
+		};
+		plugins = with pkgs; [networkmanager-openconnect];
+	};
 
   # Set your time zone.
    time.timeZone = "America/Chicago";
@@ -76,12 +98,24 @@
    services.printing.enable = true;
 
   # Set the default shell for all users
-   programs.zsh.enable = true;
-   programs.zsh.autosuggestions.enable = true;
-   programs.zsh.syntaxHighlighting.enable = true;
-   programs.starship.enable = true;
-   users.defaultUserShell = pkgs.zsh;
+   programs.zsh = {
+	enable = true;
+   	autosuggestions.enable = true;
+    syntaxHighlighting.enable = true;
 
+	# Oh-My-ZSH config
+	ohMyZsh = {
+		enable = true;
+		theme = "af-magic";
+		plugins = [
+			"fzf"
+			"git"
+			"history-substring-search"
+		];
+	};
+  };
+  programs.starship.enable = true;
+  users.defaultUserShell = pkgs.zsh;
 
   # Enable sound.
   # services.pulseaudio.enable = true;
@@ -102,34 +136,61 @@
 
    nixpkgs.config = {
     allowUnfree = true;
-    #packageOverrides = pkgs: {
-    #  unstable = import <nixos-unstable> {
-	#	config = { allowUnfree = true; };
-	#  		};
-    #	};
+    packageOverrides = pkgs: {
+      unstable = import <nixos-unstable> {
+		config = { allowUnfree = true; };
+	  		};
+    	};
 	};
+
+	fonts.packages = with pkgs; [
+		fira-code
+		jetbrains-mono
+		nerd-fonts.caskaydia-mono
+		];
 
   # List packages installed in system profile.
   # You can use https://search.nixos.org/ to find more packages (and options).
    environment.systemPackages = with pkgs; [
+	 acpi
+	 adwaita-icon-theme
      alacritty
+     btop
+	 brightnessctl
+     cliphist
      curl
      firefox
+ 	 fzf
      git
-     hyprpaper
+  	 gnumake
+     hyprlock
+	 impala
+     mpv
      kitty
      neovim
+	 networkmanagerapplet
+     nix-search-cli
      openconnect
      pavucontrol
-	 thunar
+	 playerctl
+	 power-profiles-daemon
+	 python314
+	 ripgrep
+	 rofi-wayland
+	 swww
      vim
      vmware-horizon-client
+	 wallust
      walker
      waybar
      wget
-     #unstable.wiremix
+     unstable.wiremix
+	 unzip
+	 wl-clipboard
      wlogout
+	 xfce.thunar
      yazi
+	 youtube-dl
    ];
 
   # Some programs need SUID wrappers, can be configured further or are
