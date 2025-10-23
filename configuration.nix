@@ -40,6 +40,9 @@
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
+  # Enable Experimental Features
+  nix.settings.experimental-features = [ "nix-command" "flakes" ];
+
   # Enable Systemd-logind to manage power events
   services.logind = {
 
@@ -147,6 +150,9 @@
 		fira-code
 		jetbrains-mono
 		nerd-fonts.caskaydia-mono
+		noto-fonts
+		noto-fonts-cjk-sans
+		noto-fonts-emoji
 		];
 
   # List packages installed in system profile.
@@ -154,44 +160,54 @@
    environment.systemPackages = with pkgs; [
 	 acpi
 	 adwaita-icon-theme
-     alacritty
-     btop
+	 alacritty
+	 btop
 	 brightnessctl
-     cliphist
-     curl
-     firefox
- 	 fzf
-     git
-  	 gnumake
-     hyprlock
+	 cliphist
+	 curl
+	 firefox
+	 fzf
+	 git
+	 gnumake
+	 hyprlock
 	 impala
-     mpv
-     kitty
-     neovim
+	 mpv
+	 kitty
+	 neovim
 	 networkmanagerapplet
-     nix-search-cli
-     openconnect
-     pavucontrol
+	 nix-search-cli
+	 openconnect
+	 pamixer
+	 pavucontrol
 	 playerctl
 	 power-profiles-daemon
 	 python314
 	 ripgrep
 	 rofi-wayland
 	 swww
-     vim
-     vmware-horizon-client
+	 vim
+	 vmware-horizon-client
 	 wallust
-     walker
-     waybar
-     wget
-     #unstable.wiremix
+	 walker
+	 waybar
+	 wget
+	 #unstable.wiremix
 	 unzip
 	 wl-clipboard
-     wlogout
+	 wlogout
 	 xfce.thunar
-     yazi
+	 yazi
 	 yt-dlp
    ];
+
+    # Enable MPRIS for MPV
+    nixpkgs.overlays = [
+	(self: super: {
+	    mpv = super.mpv.override {
+		scripts = [ self.mpvScripts.mpris ];
+	    };
+        })
+    ];
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
