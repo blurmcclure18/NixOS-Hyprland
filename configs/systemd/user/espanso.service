@@ -1,0 +1,11 @@
+[Unit]
+Description=espanso
+
+[Service]
+ExecStart=/nix/store/wdrl7dqk2cdi7h7rp1zyd4mi0i328jqh-espanso-2.2-unstable-2024-05-14/bin/.espanso-wrapped launcher 
+Restart=on-failure
+RestartSec=3
+
+[Install]
+WantedBy=default.target
+
