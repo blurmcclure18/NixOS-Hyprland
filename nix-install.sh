@@ -65,6 +65,10 @@ nixos-install --no-root-passwd
 echo "🔐 Setting password for alec..."
 nixos-enter --root /mnt -c 'passwd alec'
 
+# === Copy configs to home directory ===
+echo "Copying config files to home directory..."
+cp -r ./configs /mnt/home/alec/.config
+
 # === Done ===
 echo "✅ NixOS installation complete!"
 echo "💡 You can now run 'reboot'."
