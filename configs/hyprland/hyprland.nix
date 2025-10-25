@@ -21,6 +21,7 @@
       exec-once = [
         "waybar"
         "swww-daemon"
+        "hypridle"
       ];
 
       env = [
