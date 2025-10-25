@@ -101,8 +101,8 @@
         ",XF86AudioMicMute,     exec, $HOME/.config/hypr/scripts/MyVolume.sh --toggle_mic"
         ",XF86AudioRaiseVolume, exec, $HOME/.config/hypr/scripts/MyVolume.sh --inc"
         ",XF86AudioLowerVolume, exec, $HOME/.config/hypr/scripts/MyVolume.sh --dec"
-        ",XF86MonBrightnessUp,  exec, $HOME/.config/hypr/scripts/MyBrightness.sh"
-        ",XF86MonBrightnessDown,exec, $HOME/.config/hypr/scripts/MyBrightness.sh"
+        ",XF86MonBrightnessUp,  exec, $HOME/.config/hypr/scripts/MyBrightness.sh --up"
+        ",XF86MonBrightnessDown,exec, $HOME/.config/hypr/scripts/MyBrightness.sh --down"
       ];
 
       bindl = [

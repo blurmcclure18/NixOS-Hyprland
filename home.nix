@@ -4,6 +4,7 @@
   imports = [
     ./configs/zsh.nix
     ./configs/hyprland/hyprland.nix
+    ./configs/wallust/wallust.nix
   ];
 
   # Home Manager needs a bit of information about you and the paths it should
