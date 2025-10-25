@@ -4,8 +4,11 @@
 
   imports = [
     ./binds.nix
+    ./hyprlock.nix
+    ./hypridle.nix
     ./scripts/MediaCtrl.nix
     ./scripts/MyBeats.nix
+    ./scripts/hypridle-notify.nix
   ];
 
  wayland.windowManager.hyprland = {
@@ -150,4 +153,16 @@
     submap = reset
   '';
   };
+  home.packages = with pkgs; [
+    cliphist
+    hyprlock
+    hypridle
+    rofi-wayland
+    swww
+    wallust
+    walker
+    waybar
+    wl-clipboard
+    wlogout
+  ];
 }

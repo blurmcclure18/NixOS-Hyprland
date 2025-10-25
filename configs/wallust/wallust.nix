@@ -1,27 +1,35 @@
 {config, pkgs, ...}:
 
 {
+  imports = [
+    ./templates/colors-hypridle.nix
+  ];
+
   programs.wallust = {
 
     enable = true;
-
-    settings = {
-      backend = "fastresize";
-      color_space = "lch";
-      palette = "dark";
-     
-      # Templates
-      hypr.template = "colors-hyprland.conf";
-      hypr.target = "~/.config/hypr/wallust/wallust-hyprland.conf";
-      
-      rofi.template = "colors-rofi.rasi";
-      rofi.target = "~/.config/rofi/wallust/colors-rofi.rasi";
-      
-      
-      waybar.template = "colors-waybar.css";
-      waybar.target = "~/.config/waybar/wallust/colors-waybar.css";
-    };
   };
+
+  home.file.".config/wallust/wallust.toml".text = ''
+    backend = "fastresize"
+    color_space = "lch"
+    palette = "dark"
+
+    [templates]
+    hypr.template = 'colors-hyprland.conf'
+    hypr.target = '~/.config/hypr/wallust/wallust-hyprland.conf'
+    
+    hypridle.template = 'colors-hypridle.conf'
+    hypridle.target = '~/.config/hypr/wallust/wallust-hypridle.conf'
+
+    rofi.template = 'colors-rofi.rasi'
+    rofi.target = '~/.config/rofi/wallust/colors-rofi.rasi'
+    
+    
+    waybar.template = 'colors-waybar.css'
+    waybar.target = '~/.config/waybar/wallust/colors-waybar.css'
+
+  '';
 
   home.file.".config/wallust/templates/colors-hyprland.conf".text = ''
     # /* wallust template - colors-hyprland */ 

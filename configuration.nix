@@ -163,16 +163,14 @@
 	 alacritty
 	 btop
 	 brightnessctl
-	 cliphist
+	 #cliphist
 	 curl
 	 firefox
 	 fzf
 	 git
 	 gnumake
-	 hyprlock
 	 impala
 	 mpv
-	 kitty
 	 neovim
 	 networkmanagerapplet
 	 nix-search-cli
@@ -183,19 +181,19 @@
 	 power-profiles-daemon
 	 python314
 	 ripgrep
-	 rofi-wayland
-	 swww
+	 #rofi-wayland
+	 #swww
 	 vim
 	 vmware-horizon-client
-	 wallust
-	 walker
-	 waybar
+	 #wallust
+	 #walker
+	 #waybar
 	 wget
 	 #unstable.wiremix
 	 unzip
-	 wl-clipboard
-	 wlogout
-	 xfce.thunar
+	 #wl-clipboard
+	 #wlogout
+	 #xfce.thunar
 	 yazi
 	 yt-dlp
    ];

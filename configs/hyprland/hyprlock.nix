@@ -4,8 +4,10 @@
     enable = true;
 
     settings = {
+      "source" = "$HOME/.config/hypr/themes/tokyo-night-hyprlock.conf";
+
       background = {
-        color = $color;
+        color = "$color";
         path = "$HOME/.config/hypr/wallpaper_effects/.wallpaper_current";
         blur_passes = 3;
       };
@@ -13,8 +15,8 @@
         enabled = false;
       };
       input-field = {
-        size = 600, 100;
-        position = 0, 0;
+        size = "600, 100";
+        position = "0, 0";
         halign = "center";
         valign = "center";
 
@@ -34,7 +36,7 @@
         fade_on_empty = false;
       };
       auth = {
-        fingerprint:enabled = true;
+        "fingerprint:enabled" = true;
       };
     };
 

@@ -26,7 +26,6 @@
   home.packages = with pkgs;[
     # # Adds the "hello" command to your environment. It prints a friendly
     # # "Hello, world!" when run.
-    qutebrowser
 
     # # It is sometimes useful to fine-tune packages, for example, by applying
     # # overrides. You can do that directly here, just don"t forget the
@@ -77,28 +76,21 @@
      EDITOR = "nvim";
   };
 
-  #programs.zsh = {
-  #  enable = true;
+  # Testing Lock on wake from suspend
+  systemd.user.services."lock-on-sleep" = {
+    Service = {
+      Type = "forking";
+      ExecStart = "${pkgs.hyprlock}/bin/hyprlock";
+    };
+    Install = {
+      WantedBy = ["sleep.target"];
+    };
+    Unit = {
+      Description = "Lock screen before suspend";
+      Before = ["sleep.target"];
+    };
+  };
 
-  #    shellAliases = {
-  #      ".." = "cd ..";
-  #      b = "btop";
-  #      c = "clear";
-  #      chypr = "cd ~/.config/hypr";
-  #      n = "nvim";
-  #      nzsh = "nvim ~/.zshrc";
-  #      nhypr = "nvim ~/.config/hypr/hyprland.conf";
-  #      nniri = "nvim ~/.config/niri/config.kdl";
-  #      nnix = "sudo nvim /etc/nixos/configuration.nix";
-  #      nhome = "nvim ~/.config/home-manager/home.nix";
-  #      rebuild-switch = "sudo nixos-rebuild switch";
-  #      rebuild-test = "sudo nixos-rebuild test";
-  #      rebuild-flake = "nixos-rebuild switch --flake ~/.dotfiles";
-  #      nsearch = "custom_nix_search";
-  #      ":vpn" = "sudo openconnect cva.uscourts.gov --user=alecmcclure --useragent='AnyConnect'";
-  #  };
-
-  #};
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
 }
