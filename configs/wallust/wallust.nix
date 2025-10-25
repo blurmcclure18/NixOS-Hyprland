@@ -3,6 +3,9 @@
 {
   imports = [
     ./templates/colors-hypridle.nix
+    ./templates/colors-hyprland.nix
+    ./templates/colors-rofi.nix
+    ./templates/colors-waybar.nix
   ];
 
   programs.wallust = {
