@@ -2,9 +2,10 @@
 
 {
   imports = [
-    ./configs/zsh.nix
     ./configs/hyprland/hyprland.nix
+    ./configs/mpv/mpv.nix
     ./configs/wallust/wallust.nix
+    ./configs/zsh.nix
   ];
 
   # Home Manager needs a bit of information about you and the paths it should
