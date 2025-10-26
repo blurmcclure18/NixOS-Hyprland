@@ -2,7 +2,7 @@
 # your system. Help is available in the configuration.nix(5) man page, on
 # https://search.nixos.org/options and in the NixOS manual (`nixos-help`).
 
-{ config, lib, pkgs, ... }:
+{ config, lib, pkgs, unstable, ... }:
 {
   imports =
     [ # Include the results of the hardware scan.
@@ -45,32 +45,40 @@
   # Enable Systemd-logind to manage power events
   services.logind = {
 
-  # Default behavior - suspend when closed
-  lidSwitch = "suspend";
+	# Default behavior - suspend when closed
+  	lidSwitch = "suspend";
 
-  # Don't suspend when external monitor (dock) is active
-  lidSwitchDocked = "ignore";
+  	# Don't suspend when external monitor (dock) is active
+  	lidSwitchDocked = "ignore";
 
-  # When user is idle and closes lid, same as lidSwitch
-  lidSwitchExternalPower = "suspend";
+  	# When user is idle and closes lid, same as lidSwitch
+  	lidSwitchExternalPower = "suspend";
   };
 
   # Enable acpid service
   services.acpid.enable = true;
 
-   networking.hostName = "test-nixos"; # Define your hostname.
+  # Enable Bluetooth
+  hardware.bluetooth = {
+	enable = true;
+	powerOnBoot = true;
+  };
+
+  services.blueman.enable = true;
+
+  networking.hostName = "test-nixos"; # Define your hostname.
   # Pick only one of the below networking options.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
-   networking.networkmanager = {
-		enable = true;  # Easiest to use and most distros use this by default.
-		wifi = {
-			backend = "iwd";
-		};
-		plugins = with pkgs; [networkmanager-openconnect];
+  networking.networkmanager = {
+	enable = true;  # Easiest to use and most distros use this by default.
+	wifi = {
+		backend = "iwd";
 	};
+	plugins = with pkgs; [networkmanager-openconnect];
+  };
 
   # Set your time zone.
-   time.timeZone = "America/Chicago";
+  time.timeZone = "America/Chicago";
 
   # Enable Hyprland
   programs.hyprland = {
@@ -79,22 +87,22 @@
 	};
 
 # Enable Greetd display manager
-#  services.greetd = {
-#	enable = true;
-#	settings = {
-#		default_session = {
-#			command = "Hyprland";
-#			user = "alec";
-#		};
-#	};
-#  };
+  services.greetd = {
+	enable = true;
+	settings = {
+		default_session = {
+			command = "${pkgs.greetd.tuigreet}/bin/tuigreet --time --cmd Hyprland";
+			user = "alec";
+		};
+	};
+  };
 
   # Enable ly TUI display manager
-  services.displayManager.ly.enable = true;
+  #services.displayManager.ly.enable = true;
 
   services.displayManager.defaultSession = "hyprland";
-  #services.displayManager.autoLogin.enable = true;
-  #services.displayManager.autoLogin.user = "alec";
+  services.displayManager.autoLogin.enable = true;
+  services.displayManager.autoLogin.user = "alec";
 
   # Enable CUPS to print documents.
    services.printing.enable = true;
@@ -103,7 +111,7 @@
    programs.zsh = {
 	enable = true;
    	autosuggestions.enable = true;
-    syntaxHighlighting.enable = true;
+	syntaxHighlighting.enable = true;
 
 	# Oh-My-ZSH config
 	ohMyZsh = {
@@ -140,14 +148,14 @@
 	allowUnfree = true;
     };
 
-	fonts.packages = with pkgs; [
-		fira-code
-		jetbrains-mono
-		nerd-fonts.caskaydia-mono
-		noto-fonts
-		noto-fonts-cjk-sans
-		noto-fonts-emoji
-		];
+    fonts.packages = with pkgs; [
+	fira-code
+	jetbrains-mono
+	nerd-fonts.caskaydia-mono
+	noto-fonts
+	noto-fonts-cjk-sans
+	noto-fonts-emoji
+    ];
 
   # List packages installed in system profile.
   # You can use https://search.nixos.org/ to find more packages (and options).
@@ -155,8 +163,8 @@
 	 acpi
 	 adwaita-icon-theme
 	 alacritty
-	 blueberry
 	 bluetui
+	 bluez
 	 btop
 	 brightnessctl
 	 curl
@@ -176,14 +184,18 @@
 	 power-profiles-daemon
 	 python314
 	 ripgrep
+	 greetd.tuigreet
 	 vim
 	 wget
-	 unstable.wiremix
 	 unzip
 	 vmware-horizon-client
 	 yazi
 	 yt-dlp
-   ];
+   ] ++ 
+   (with unstable; [
+	hyprmon
+	wiremix
+	]);
 
     # Enable MPRIS for MPV
     nixpkgs.overlays = [

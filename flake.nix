@@ -26,7 +26,7 @@
 		nixosConfigurations = {
 			test-nixos = lib.nixosSystem {
 				inherit system;
-				inherit unstable;
+				specialArgs = {inherit unstable;};
 				modules = [./configuration.nix ];
 			};
 		};
@@ -34,8 +34,9 @@
 		homeConfigurations = {
 			alec = home-manager.lib.homeManagerConfiguration {
 				inherit pkgs;
-				inherit unstable;
 				modules = [ ./home.nix ];
+
+				extraSpecialArgs = { inherit unstable; };
 			};
 		};
 	};
