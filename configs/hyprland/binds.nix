@@ -25,6 +25,7 @@
         "$mainMod SHIFT, P, exec, $HOME/.config/hypr/scripts/RofiPowerProfiles-selector.sh"
         "$mainMod SHIFT, F, fullscreen"
         "$mainMod SHIFT, R, exec, pkill waybar && waybar"
+        "$mainMod SHIFT, B, exec, home-manager switch --flake ~/.dotfiles"
         "$mainMod SHIFT, ESC, exit"
 
         "SUPER, L, exec, hyprlock"

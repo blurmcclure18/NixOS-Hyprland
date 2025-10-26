@@ -6,9 +6,7 @@
     ./binds.nix
     ./hyprlock.nix
     ./hypridle.nix
-    ./scripts/MediaCtrl.nix
-    ./scripts/MyBeats.nix
-    ./scripts/hypridle-notify.nix
+    ./scripts.nix
   ];
 
  wayland.windowManager.hyprland = {
@@ -160,6 +158,7 @@
     hypridle
     rofi-wayland
     swww
+    vmware-horizon-client
     wallust
     walker
     waybar

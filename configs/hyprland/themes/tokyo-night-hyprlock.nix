@@ -1,0 +1,11 @@
+{configs, pkgs, ... }:
+
+{
+  home.file.".config/hypr/themes/tokyo-night-hyprlock.conf".text = '' 
+    $color = rgba(26,27,38,1.0)
+    $inner_color = rgba(26,27,38,0.8)
+    $outer_color = rgba(205,214,244,1.0)
+    $font_color = rgba(205,214,244,1.0)
+    $check_color = rgba(68, 157, 171, 1.0)
+  '';
+}

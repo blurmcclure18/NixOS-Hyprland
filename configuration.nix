@@ -184,7 +184,7 @@
 	 #rofi-wayland
 	 #swww
 	 vim
-	 vmware-horizon-client
+	 #vmware-horizon-client
 	 #wallust
 	 #walker
 	 #waybar
