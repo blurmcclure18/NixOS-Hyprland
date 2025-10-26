@@ -6,6 +6,8 @@
     ./configs/mpv/mpv.nix
     ./configs/rofi
     ./configs/wallust/wallust.nix
+    ./configs/waybar
+    ./configs/wlogout
     ./configs/zsh.nix
   ];
 
