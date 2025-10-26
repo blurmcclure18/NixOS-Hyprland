@@ -1,4 +1,4 @@
-{ configs, pkgs, ... }
+{ configs, pkgs, ... }:
 
 {
  home.file.".config/rofi/themes/Kool_Loner0rZ.rasi".text = ''

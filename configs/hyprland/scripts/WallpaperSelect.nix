@@ -96,6 +96,8 @@
           passed_path="__DOLLAR__{1:-}"
           cache_dir="__DOLLAR__HOME/.cache/swww/"
           rofi_link="__DOLLAR__HOME/.config/rofi/.current_wallpaper"
+          #rofi_link="__DOLLAR__HOME/.dotfiles/configs/rofi/.current_wallpaper"
+          #wallpaper_current="__DOLLAR__HOME/.dotfiles/configs/hyprland/wallpaper_effects/.wallpaper_current"
           wallpaper_current="__DOLLAR__HOME/.config/hypr/wallpaper_effects/.wallpaper_current"
           
           # Helper: get focused monitor name (prefer JSON)

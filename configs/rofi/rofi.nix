@@ -1,4 +1,4 @@
-{ configs, pkgs, ... }
+{ configs, pkgs, lib, ... }:
 
 {
   imports = [
@@ -9,7 +9,5 @@
     ./config-rofi-theme.nix
     ./config-rofi-Beats-menu.nix
   ];
-
-  imports = builtins.attrValues (import ./themes);
 }
 

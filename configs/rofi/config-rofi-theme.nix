@@ -1,4 +1,4 @@
-{configs, pkgs, ... }:
+{ configs, pkgs, ... }:
 
 {
   home.file.".config/rofi/config-rofi-theme.rasi".text = ''

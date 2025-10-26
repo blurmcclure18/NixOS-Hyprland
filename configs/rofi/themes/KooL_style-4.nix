@@ -1,4 +1,4 @@
-{ configs, pkgs, ... }
+{ configs, pkgs, ... }:
 
 {
   home.file.".config/rofi/themes/KooL_style-4.rasi".text = '' 

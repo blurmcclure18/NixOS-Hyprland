@@ -1,4 +1,4 @@
-{configs, pkgs, ... }:
+{ configs, pkgs, ... }:
 
 {
   home.file.".config/rofi/0-shared-fonts.rasi".text = '' 

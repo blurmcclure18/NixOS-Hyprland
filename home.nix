@@ -4,7 +4,7 @@
   imports = [
     ./configs/hyprland/hyprland.nix
     ./configs/mpv/mpv.nix
-    ./configs/rofi/rofi.nix
+    ./configs/rofi
     ./configs/wallust/wallust.nix
     ./configs/zsh.nix
   ];
