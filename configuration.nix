@@ -194,6 +194,7 @@
 	 #wl-clipboard
 	 #wlogout
 	 #xfce.thunar
+	 vmware-horizon-client
 	 yazi
 	 yt-dlp
    ];

@@ -158,7 +158,6 @@
     hypridle
     rofi-wayland
     swww
-    vmware-horizon-client
     wallust
     walker
     waybar

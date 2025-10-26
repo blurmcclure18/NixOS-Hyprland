@@ -17,7 +17,7 @@
         nhome = "nvim ~/.dotfiles/home.nix";
         rebuild-switch = "sudo nixos-rebuild switch";
         rebuild-test = "sudo nixos-rebuild test";
-        rebuild-flake = "nixos-rebuild switch --flake ~/.dotfiles";
+        rebuild-flake = "sudo nixos-rebuild switch --flake ~/.dotfiles";
         rebuild-home = "home-manager switch --flake ~/.dotfiles";
         ":vpn" = "sudo openconnect cva.uscourts.gov --user=alecmcclure --useragent='AnyConnect'";
     };
