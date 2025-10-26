@@ -2,7 +2,7 @@
 
 {
   imports = [
-    wlogout.nix
+    ./wlogout.nix
   ];
 }
 
