@@ -3,7 +3,6 @@
 # https://search.nixos.org/options and in the NixOS manual (`nixos-help`).
 
 { config, lib, pkgs, ... }:
-
 {
   imports =
     [ # Include the results of the hardware scan.
@@ -138,13 +137,8 @@
 	};
 
    nixpkgs.config = {
-    allowUnfree = true;
-    #packageOverrides = pkgs: {
-      #unstable = import <nixos-unstable> {
-		#config = { allowUnfree = true; };
-	  		#};
-    	#};
-	};
+	allowUnfree = true;
+    };
 
 	fonts.packages = with pkgs; [
 		fira-code
@@ -161,9 +155,10 @@
 	 acpi
 	 adwaita-icon-theme
 	 alacritty
+	 blueberry
+	 bluetui
 	 btop
 	 brightnessctl
-	 #cliphist
 	 curl
 	 firefox
 	 fzf
@@ -181,19 +176,10 @@
 	 power-profiles-daemon
 	 python314
 	 ripgrep
-	 #rofi-wayland
-	 #swww
 	 vim
-	 #vmware-horizon-client
-	 #wallust
-	 #walker
-	 #waybar
 	 wget
-	 #unstable.wiremix
+	 unstable.wiremix
 	 unzip
-	 #wl-clipboard
-	 #wlogout
-	 #xfce.thunar
 	 vmware-horizon-client
 	 yazi
 	 yt-dlp
