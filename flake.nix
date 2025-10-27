@@ -24,10 +24,22 @@
 		};
 	  in {
 		nixosConfigurations = {
-			test-nixos = lib.nixosSystem {
+			work-nixos = lib.nixosSystem {
 				inherit system;
 				specialArgs = {inherit unstable;};
-				modules = [./configuration.nix ];
+				modules = [
+					./hosts/work-desktop/configuration.nix 
+					./hosts/work-desktop/hardware-configuration.nix
+					];
+			};
+
+			laptop-nixos = lib.nixosSystem {
+				inherit system;
+				specialArgs = {inherit unstable;};
+				modules = [
+					./hosts/laptop/configuration.nix
+					./hosts/laptop/hardware-configuration.nix
+				];
 			};
 		};
 
