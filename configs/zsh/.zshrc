@@ -14,6 +14,7 @@ alias nzsh='nvim ~/.dotfiles/configs/zsh/.zshrc'
 alias nhypr='nvim ~/.dotfiles/configs/hyprland/hyprland.conf'
 alias nhome='nvim ~/.dotfiles/home.nix'
 alias rebuild-flake='rebuild_flake'
+alias rebuild-home='home-manager switch --flake ~/.dotfiles'
 alias nsearch='custom_nix_search'
 alias :vpn="sudo openconnect cva.uscourts.gov --user=alecmcclure --useragent='AnyConnect'"
 
