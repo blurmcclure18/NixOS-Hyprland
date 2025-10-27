@@ -4,6 +4,7 @@
   environment.systemPackages = with pkgs; [
 	acpi
 	adwaita-icon-theme
+	alacritty
 	bluetui
 	bluez
 	btop
@@ -16,7 +17,7 @@
 	impala
 	mpv
 	neovim
-	netowrkmanagerapplet
+	networkmanagerapplet
 	nix-search-cli
 	openconnect
 	pamixer
