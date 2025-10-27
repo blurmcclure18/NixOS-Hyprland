@@ -5,10 +5,10 @@
     ./configs/hyprland/hyprland.nix
     ./configs/mpv/mpv.nix
     ./configs/rofi
-    ./configs/wallust/wallust.nix
+    ./configs/wallust
     ./configs/waybar
     ./configs/wlogout
-    ./configs/zsh.nix
+    ./configs/zsh
   ];
 
   # Home Manager needs a bit of information about you and the paths it should
