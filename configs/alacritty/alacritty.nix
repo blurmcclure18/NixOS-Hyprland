@@ -2,7 +2,8 @@
 
 {
   home.file.".config/alacritty/alacritty.toml".text = '' 
-    general.import = [colors.toml]
+    [general]
+    import = ["./colors.toml"]
 
     [env]
     TERM = "xterm-256color"
