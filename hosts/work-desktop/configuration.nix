@@ -2,7 +2,7 @@
 # your system. Help is available in the configuration.nix(5) man page, on
 # https://search.nixos.org/options and in the NixOS manual (`nixos-help`).
 
-{ config, lib, pkgs, unstable, ... }:
+{ config, lib, pkgs, unstable, self, ... }:
 {
   imports =
     [ # Include the results of the hardware scan.
@@ -14,6 +14,13 @@
 
 	plymouth = {
 		enable = true;
+		theme = "omarchy";
+		themePackages = [
+			(pkgs.runCommand "plymouth-theme-omarchy" { } ''
+			mkdir -p $out/share/plymouth/themes/omarchy
+        		cp -r ${self.inputs.plymouth-theme-omarchy}/* $out/share/plymouth/themes/omarchy/
+			'')
+		];
 	};
 
 	# Enable Systemd initrd
@@ -33,11 +40,12 @@
 	# Hide the OS choice for bootloaders
 	# It's still possible to open the bootloader list by pressing any key
 	# It will just not appear on screen unless a key is pressed
-	loader.timeout = 0;
+	loader.timeout = 3;
     };
 
   # Use the systemd-boot EFI boot loader.
   boot.loader.systemd-boot.enable = true;
+  boot.loader.systemd-boot.consoleMode = "auto";
   boot.loader.efi.canTouchEfiVariables = true;
 
   # Enable Experimental Features

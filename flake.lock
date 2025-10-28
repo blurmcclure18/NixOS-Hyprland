@@ -51,11 +51,28 @@
         "type": "indirect"
       }
     },
+    "plymouth-theme-omarchy": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1761670066,
+        "narHash": "sha256-QWPtEYV1odYjiH+C8ZJ8ScdW4NBKyZDsq8AWV+Iz9Z4=",
+        "owner": "blurmcclure18",
+        "repo": "plymouth-theme-omarchy",
+        "rev": "82474a307ea0e8dfb1dde1616d64241f7a7de1ef",
+        "type": "github"
+      },
+      "original": {
+        "owner": "blurmcclure18",
+        "repo": "plymouth-theme-omarchy",
+        "type": "github"
+      }
+    },
     "root": {
       "inputs": {
         "home-manager": "home-manager",
         "nixpkgs": "nixpkgs",
-        "nixpkgs-unstable": "nixpkgs-unstable"
+        "nixpkgs-unstable": "nixpkgs-unstable",
+        "plymouth-theme-omarchy": "plymouth-theme-omarchy"
       }
     }
   },

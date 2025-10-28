@@ -11,9 +11,14 @@
 		home-manager.url = "github:nix-community/home-manager/release-25.05";
 
 		home-manager.inputs.nixpkgs.follows = "nixpkgs";
+
+		plymouth-theme-omarchy = {
+			url = "github:blurmcclure18/plymouth-theme-omarchy";
+			flake = false;
+		};
 	};
 
-	outputs = { self, nixpkgs, nixpkgs-unstable, home-manager, ...}:
+	outputs = { home-manager, nixpkgs, nixpkgs-unstable, self, ...}:
 	  let
 		system = "x86_64-linux";
 		lib = nixpkgs.lib;
@@ -26,7 +31,7 @@
 		nixosConfigurations = {
 			work-nixos = lib.nixosSystem {
 				inherit system;
-				specialArgs = {inherit unstable;};
+				specialArgs = {inherit self unstable;};
 				modules = [
 					./hosts/work-desktop/configuration.nix 
 					./hosts/work-desktop/hardware-configuration.nix
@@ -35,7 +40,7 @@
 
 			laptop-nixos = lib.nixosSystem {
 				inherit system;
-				specialArgs = {inherit unstable;};
+				specialArgs = {inherit self unstable;};
 				modules = [
 					./hosts/laptop/configuration.nix
 					./hosts/laptop/hardware-configuration.nix

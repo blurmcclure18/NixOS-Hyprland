@@ -132,6 +132,7 @@
         "opacity 0.95 0.8, tag:terminal*"
       ];
     };
+
   extraConfig = ''
     # Set Monitor Settings
     monitor=,preferred,auto,1.2
@@ -151,6 +152,7 @@
     bind = $mainMod SUPER, P, submap, reset
     submap = reset
   '';
+
   };
   home.packages = with pkgs; [
     cliphist
