@@ -36,7 +36,7 @@
       # Toggle play/pause
       toggle_play_pause() {
         playerctl play-pause
-        sleep 0.1
+        sleep 0.3
         show_music_notification
       }
       

@@ -7,6 +7,7 @@
   "modules-left": ["custom/omarchy", "hyprland/workspaces"],
   "modules-center": ["clock" ],
   "modules-right": [
+    "custom/cava_mviz",
     "bluetooth",
     "network",
     "pulseaudio",
@@ -40,6 +41,10 @@
   "custom/omarchy": {
     "format": "<span font='omarchy'>\ue900</span>",
     "on-click": "walker"
+  },
+  "custom/cava_mviz":{
+    "exec": "$HOME/.config/hypr/scripts/WaybarCava.sh",
+    "format": "{}"
   },
     "cpu": {
     "interval": 5,
