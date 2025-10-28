@@ -2,13 +2,7 @@
 
 {
   imports = [
-    ./configs/hyprland/hyprland.nix
-    ./configs/mpv/mpv.nix
-    ./configs/rofi
-    ./configs/wallust
-    ./configs/waybar
-    ./configs/wlogout
-    ./configs/zsh
+    ./configs
   ];
 
   # Home Manager needs a bit of information about you and the paths it should
