@@ -12,8 +12,8 @@
     
     [colors.normal]
     black   = "{{color0}}"
-    red     = "{{color1}}"
-    green   = "{{color2}}"
+    red     = "{{color7}}" #This is wrong commands color
+    green   = "{{color3}}" #This is correct commands color
     yellow  = "{{color3}}"
     blue    = "{{color4}}"
     magenta = "{{color5}}"
