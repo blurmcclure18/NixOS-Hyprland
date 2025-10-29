@@ -4,7 +4,7 @@
   "position": "top",
   "spacing": 0,
   "height": 26,
-  "modules-left": ["custom/omarchy", "hyprland/workspaces"],
+  "modules-left": [/*"custom/omarchy",*/ "hyprland/workspaces"],
   "modules-center": ["clock"],
   "modules-right": [
     "custom/cava_mviz",
@@ -100,7 +100,7 @@
     "format-disabled": "󰂲",
     "format-connected": "",
     "tooltip-format": "Devices connected: {num_connections}",
-    "on-click": "bluetui"/*"blueberry"*/
+    "on-click": "alacritty --class=Bluetui -e bluetui"/*"blueberry"*/
   },
   "pulseaudio": {
     "format": "{icon}",
