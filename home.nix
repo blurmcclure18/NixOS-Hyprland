@@ -1,6 +1,12 @@
 { config, pkgs, unstable, ... }:
 
 {
+  nixpkgs = {
+    config = {
+      allowUnfree = true;
+      allowUnfreePredicate = (_: true);
+    };
+  };
   imports = [
     ./configs
   ];
@@ -23,6 +29,7 @@
   # environment.
   home.packages = with pkgs;[
     cava
+    remmina
     spotify-player
     # # Adds the "hello" command to your environment. It prints a friendly
     # # "Hello, world!" when run.
