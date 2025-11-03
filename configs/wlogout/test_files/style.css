@@ -18,8 +18,8 @@ button {
     background-repeat: no-repeat;
     background-position: center;
     background-size: 20%;
-    color: #ffffff;
     background-color: rgba(200, 220, 255, 0);
+    color: #FFFFFF;
     animation: gradient_f 20s ease-in infinite;
     border-radius: 80px; /* Increased border radius for a more rounded look */
 }
@@ -32,7 +32,7 @@ button:focus {
 */
 /* Added this to change the menu to change selection color on keyboard selection rather than mouse selection */
 button:focus {
-    background-color: @color12; 
+    background-color: @color5; 
     color: #1e1e2e;
     /*background-size: 50%;*/
     /*margin: 30px;*/
@@ -42,18 +42,18 @@ button:focus {
 	
 }
 
-
+/*
 button:hover {
-    /*background-color: @color12;*/ 
-    color: #ffffff/*#1e1e2e*/;
-    /*background-size: 50%;*/
-    /*margin: 30px;*/
-    /*border-radius: 80px;*/
-   /* transition: all 0.3s cubic-bezier(.55, 0.0, .28, 1.682), box-shadow 0.2s ease-in-out, background-color 0.2s ease-in-out;*/
+    background-color: @color12; 
+    color: #1e1e2e;
+    background-size: 50%;
+    margin: 30px;
+    border-radius: 80px; 
+    transition: all 0.3s cubic-bezier(.55, 0.0, .28, 1.682), box-shadow 0.2s ease-in-out, background-color 0.2s ease-in-out;
     box-shadow: 0 0 50px @color7; 
 	
 }
-
+*/
 
 /* Adjust the size of the icon or content inside the button */
 button span {
