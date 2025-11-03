@@ -41,6 +41,10 @@
   color: @color6;
 }
 
+#workspaces button.occupied {
+  color: @color6;
+}
+
 #workspaces button.hover {
   background-color: transparent;
   color: @color2;

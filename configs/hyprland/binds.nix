@@ -20,6 +20,8 @@
         "$mainMod, F, fullscreen"
         "$mainMod, P, exec, wlogout"
         "$mainMod, R, exec, $HOME/.config/hypr/scripts/RofiThemeSelector-modified.sh"
+        "$mainMod SHIFT, W, exec, $HOME/.config/hypr/scripts/WaybarLayout.sh"
+        "$mainMod CTRL, W, exec, $HOME/.config/hypr/scripts/WaybarStyles.sh"
         "$mainMod, W, exec, $HOME/.config/hypr/scripts/WallpaperSelect.sh"
         "$mainMod SHIFT, Q, exit,"
         "$mainMod SHIFT, P, exec, $HOME/.config/hypr/scripts/RofiPowerProfiles-selector.sh"

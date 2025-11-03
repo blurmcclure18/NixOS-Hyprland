@@ -3,7 +3,7 @@
 {
   home.file.".config/hypr/scripts/MediaCtrl.sh" = {
     executable = true;
-    text = builtins.replaceStrings ["$"] ["$"] ''
+    text = ''
       #!/bin/sh
       # /* ---- 💫 https://github.com/JaKooLit 💫 ---- */  ##
       # Playerctl
