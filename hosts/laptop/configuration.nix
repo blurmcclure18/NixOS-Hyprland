@@ -88,18 +88,18 @@
 	};
 
 # Enable Greetd display manager
-  services.greetd = {
-	enable = true;
-	settings = {
-		default_session = {
-			command = "${pkgs.greetd.tuigreet}/bin/tuigreet --time --cmd Hyprland";
-			user = "alec";
-		};
-	};
-  };
+#  services.greetd = {
+#	enable = true;
+#	settings = {
+#		default_session = {
+#			command = "${pkgs.greetd.tuigreet}/bin/tuigreet --time --cmd Hyprland";
+#			user = "alec";
+#		};
+#	};
+#  };
 
   # Enable ly TUI display manager
-  #services.displayManager.ly.enable = true;
+  services.displayManager.ly.enable = true;
 
   services.displayManager.defaultSession = "hyprland";
   services.displayManager.autoLogin.enable = true;
