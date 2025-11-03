@@ -102,8 +102,8 @@
   services.displayManager.ly.enable = true;
 
   services.displayManager.defaultSession = "hyprland";
-  services.displayManager.autoLogin.enable = true;
-  services.displayManager.autoLogin.user = "alec";
+  #services.displayManager.autoLogin.enable = true;
+  #services.displayManager.autoLogin.user = "alec";
 
   # Enable CUPS to print documents.
    services.printing.enable = true;
