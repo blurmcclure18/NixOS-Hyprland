@@ -46,6 +46,15 @@
 					./hosts/laptop/hardware-configuration.nix
 				];
 			};
+
+			home-nixos = lib.nixosSystem {
+				inherit system;
+				specialArgs = {inherit self unstable;};
+				modules = [
+					./hosts/home-desktop/configuration.nix 
+					./hosts/home-desktop/hardware-configuration.nix
+					];
+			};
 		};
 
 		homeConfigurations = {
