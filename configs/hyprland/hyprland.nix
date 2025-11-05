@@ -25,7 +25,7 @@
       env = [
         "XCURSOR_THEME,Adwaita"
         "XCURSOR_SIZE,24"
-        "HYPRCURSOR_SIZE,50"
+        #"HYPRCURSOR_SIZE,50"
         "AQ_NO_MODIFIERS=1"
         "HYPRLAND_TRACE=1"
 
@@ -119,6 +119,10 @@
         touchpad = {
           natural_scroll = true;
         };
+      };
+
+      cursor = {
+	no_hardware_cursors = true;
       };
 
       gestures = {
