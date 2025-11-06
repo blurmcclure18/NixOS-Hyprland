@@ -150,7 +150,7 @@
     bindl = , switch:on:Lid Switch,exec,hyprctl keyword "eDP-1,disable"
 
     # For passthrough keyboard into a VM
-    bind = $mainMod SUPER, P, submap, passthru
+    bind = $mainMod SUPER, P, submap, passthru 
     submap = passthru
 
     # to unbind
