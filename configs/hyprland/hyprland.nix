@@ -141,7 +141,7 @@
     # Set Monitor Settings
     monitor=,preferred,auto,1.2
     monitor=HDMI-A-1,3840x1080,auto,auto
-    monitor=DP-1,highres,auto,1.6
+    monitor=DP-1,highres,auto,1
     monitor=DP-2,highres,auto,1.6
     monitor=DP-3,highres,auto,auto
 
@@ -150,7 +150,7 @@
     bindl = , switch:on:Lid Switch,exec,hyprctl keyword "eDP-1,disable"
 
     # For passthrough keyboard into a VM
-    bind = $mainMod SUPER, P, submap, passthru
+    bind = $mainMod SUPER, P, submap, passthru 
     submap = passthru
 
     # to unbind

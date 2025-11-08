@@ -34,7 +34,6 @@
 	yazi
 	yt-dlp
   ] ++ (with unstable; [
-	hyprmon
 	omnissa-horizon-client
 	wiremix
   ]);
