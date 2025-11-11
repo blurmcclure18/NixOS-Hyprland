@@ -12,13 +12,15 @@
 
 		home-manager.inputs.nixpkgs.follows = "nixpkgs";
 
+		nix-flatpak.url = "github:gmodena/nix-flatpak";
+
 		plymouth-theme-omarchy = {
 			url = "github:blurmcclure18/plymouth-theme-omarchy";
 			flake = false;
 		};
 	};
 
-	outputs = { home-manager, nixpkgs, nixpkgs-unstable, self, ...}:
+	outputs = { home-manager, nixpkgs, nixpkgs-unstable, nix-flatpak, self, ...}:
 	  let
 		system = "x86_64-linux";
 		lib = nixpkgs.lib;
@@ -42,6 +44,7 @@
 				inherit system;
 				specialArgs = {inherit self unstable;};
 				modules = [
+					nix-flatpak.nixosModules.nix-flatpak
 					./hosts/laptop/configuration.nix
 					./hosts/laptop/hardware-configuration.nix
 				];
