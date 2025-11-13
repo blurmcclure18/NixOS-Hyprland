@@ -10,6 +10,7 @@
 	btop
 	brightnessctl
 	curl
+	discord
 	firefox
 	fzf
 	git
