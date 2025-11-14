@@ -182,7 +182,6 @@
 	power-profiles-daemon
 	python314
 	ripgrep
-	tzdata
 	vim
 	wget
 	unzip

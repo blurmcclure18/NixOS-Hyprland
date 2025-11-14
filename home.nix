@@ -30,7 +30,8 @@
   home.packages = with pkgs;[
     cava
     remmina
-    spotify-player
+    #spotify-player
+    #librespot
     # # Adds the "hello" command to your environment. It prints a friendly
     # # "Hello, world!" when run.
 
@@ -39,6 +40,7 @@
     # # parentheses. Maybe you want to install Nerd Fonts with a limited number of
     # # fonts?
     # (pkgs.nerdfonts.override { fonts = [ "FantasqueSansMono" ]; })
+    (spotify-player.override {withAudioBackend = "alsa";})
 
     # # You can also create simple shell scripts directly inside your
     # # configuration. For example, this adds a command "my-hello" to your

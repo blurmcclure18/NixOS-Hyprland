@@ -13,7 +13,7 @@
         }
         
         hypridle_resume () {
-          hyprctl dismissnotify && hyprctl notify -1 6000 $color3 "fontsize:15 Oh! You're Back"
+          hyprctl dismissnotify && hyprctl notify -1 6000 $color3 "fontsize:15 Welcome Back!"
         }
         
         if [[ "$1" == "--warn" ]]; then

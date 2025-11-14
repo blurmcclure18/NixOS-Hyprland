@@ -3,6 +3,7 @@
 {
   imports = [
 	./alacritty
+	./btop
 	./hyprland/hyprland.nix
 	./mpv/mpv.nix
 	./rofi
