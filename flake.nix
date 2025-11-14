@@ -24,6 +24,7 @@
 	  let
 		system = "x86_64-linux";
 		lib = nixpkgs.lib;
+		nix-flat = nix-flatpak.nixosModules.nix-flatpak;
 		pkgs = nixpkgs.legacyPackages.${system};
 		unstable = import nixpkgs-unstable {
 			inherit system;
@@ -54,6 +55,7 @@
 				inherit system;
 				specialArgs = {inherit self unstable;};
 				modules = [
+					nix-flat
 					./hosts/optiplex-desktop/configuration.nix 
 					./hosts/optiplex-desktop/hardware-configuration.nix
 					];
