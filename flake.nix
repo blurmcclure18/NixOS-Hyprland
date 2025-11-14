@@ -31,14 +31,6 @@
 		};
 	  in {
 		nixosConfigurations = {
-			work-nixos = lib.nixosSystem {
-				inherit system;
-				specialArgs = {inherit self unstable;};
-				modules = [
-					./hosts/work-desktop/configuration.nix 
-					./hosts/work-desktop/hardware-configuration.nix
-					];
-			};
 
 			laptop-nixos = lib.nixosSystem {
 				inherit system;
