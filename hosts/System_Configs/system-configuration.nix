@@ -165,6 +165,7 @@
 	fzf
 	git
 	gnumake
+	greetd.tuigreet
 	impala
 	mpv
 	neovim
@@ -177,7 +178,7 @@
 	power-profiles-daemon
 	python314
 	ripgrep
-	greetd.tuigreet
+	tzdata
 	vim
 	wget
 	unzip
