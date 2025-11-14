@@ -166,7 +166,6 @@
     rofi-wayland
     swww
     wallust
-    walker
     waybar
     wl-clipboard
     wlogout

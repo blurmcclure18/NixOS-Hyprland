@@ -2,7 +2,7 @@
 
 {
   imports = [
-    ./system-packages.nix
+    ./system-configuration.nix
     ./flatpak.nix
   ];
 }
