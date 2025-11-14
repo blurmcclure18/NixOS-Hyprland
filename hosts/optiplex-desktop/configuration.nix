@@ -4,6 +4,7 @@
 
 { config, lib, pkgs, unstable, self, ... }:
 {
+
   imports =
     [ # Include the results of the hardware scan.
 	./hardware-configuration.nix
@@ -11,5 +12,4 @@
     ];
 
   networking.hostName = "optiplex-nixos"; # Define your hostname.
-
 }
