@@ -12,4 +12,5 @@
     ];
 
   networking.hostName = "optiplex-nixos"; # Define your hostname.
+
 }

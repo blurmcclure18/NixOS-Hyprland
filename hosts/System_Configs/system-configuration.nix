@@ -182,6 +182,7 @@
 	power-profiles-daemon
 	python314
 	ripgrep
+	teams
 	vim
 	wget
 	unzip
