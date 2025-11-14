@@ -70,6 +70,10 @@
   # Set your time zone.
   time.timeZone = "America/Chicago";
 
+  environment.variables = {
+	TZ = "America/Chicago";
+  };
+
   # Enable Hyprland
   programs.hyprland = {
   	enable = true;
