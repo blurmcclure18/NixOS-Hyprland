@@ -5,7 +5,7 @@
   "spacing": 0,
   "height": 26,
   "modules-left": [/*"custom/omarchy",*/ "hyprland/workspaces"],
-  "modules-center": ["clock"],
+  "modules-center": ["custom/hypridle","clock"],
   "modules-right": [
     "custom/cava_mviz",
     "bluetooth",
@@ -47,6 +47,18 @@
   "custom/center_spacer":{
     "format": " ",
     "interval":0
+  },
+
+  // Hypridle inhibitor
+  "custom/hypridle": {
+	"format": "󱫗 ",
+	"return-type": "json",
+	"escape": true,
+	"exec-on-event": true,
+	"interval": 60,
+	"exec": "$HOME/.config/hypr/scripts/Hypridle.sh status",
+	"on-click": "$HOME/.config/hypr/scripts/Hypridle.sh toggle",
+	"on-click-right": "hyprlock"
   },
 
   "custom/omarchy": {

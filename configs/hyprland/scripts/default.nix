@@ -2,6 +2,7 @@
 
 {
   imports = [
+    ./Hypridle.nix
     ./MyBeats.nix
     ./MyBrightness.nix
     ./MyVolume.nix
