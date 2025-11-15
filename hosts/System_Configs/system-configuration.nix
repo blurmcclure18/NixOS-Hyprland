@@ -182,7 +182,6 @@
 	power-profiles-daemon
 	python314
 	ripgrep
-	teams
 	vim
 	wget
 	unzip
@@ -191,6 +190,7 @@
 	yt-dlp
   ] ++ (with unstable; [
 	#omnissa-horizon-client
+	spotify-player
 	wiremix
   ]);
   # Enable MPRIS for MPV
