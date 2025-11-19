@@ -14,6 +14,8 @@
 
 		nix-flatpak.url = "github:gmodena/nix-flatpak";
 
+		nix-gaming.url = "github:fufexan/nix-gaming";
+
 		plymouth-theme-omarchy = {
 			url = "github:blurmcclure18/plymouth-theme-omarchy";
 			flake = false;
@@ -45,7 +47,7 @@
 
 			home-nixos = lib.nixosSystem {
 				inherit system;
-				specialArgs = {inherit self unstable;};
+				specialArgs = {inherit inputs self unstable;};
 				modules = [
 					./hosts/home-desktop/configuration.nix 
 					./hosts/home-desktop/hardware-configuration.nix
