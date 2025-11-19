@@ -1,9 +1,5 @@
 {config, pkgs, ... }:
 {
-  services.hypridle = {
-    enable = true;
-  };
-
   home.file.".config/hypr/hypridle.conf".text = ''
 
       general {
@@ -13,12 +9,12 @@
         ignore_dbus_inhibit = false
       }
       listener {
-        timeout = 540
+        timeout = 840
         on-timeout = $HOME/.config/hypr/scripts/hypridle-notify.sh --warn
         on-resume = $HOME/.config/hypr/scripts/hypridle-notify.sh --resume
         }
       listener {
-        timeout = 600
+        timeout = 900
         on-timeout = loginctl lock-session
       }
     '';

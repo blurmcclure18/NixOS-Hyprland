@@ -19,6 +19,7 @@
 		elif [[ "$1" == "toggle" ]]; then
 		    if pgrep -x "$PROCESS" >/dev/null; then
 		        pkill "$PROCESS"
+			echo "Killed $PROCESS"
 		    else
 		        "$PROCESS"
 		    fi
