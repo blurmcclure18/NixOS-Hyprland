@@ -22,7 +22,7 @@
 		};
 	};
 
-	outputs = { home-manager, nixpkgs, nixpkgs-unstable, nix-flatpak, self, ...}:
+	outputs = { home-manager, nixpkgs, nixpkgs-unstable, nix-flatpak, self, ...}@inputs:
 	  let
 		system = "x86_64-linux";
 		lib = nixpkgs.lib;

@@ -163,10 +163,13 @@
 	bluez
 	btop
 	brightnessctl
+	clang
+	cmake
 	curl
 	discord
 	firefox
 	fzf
+	gcc
 	git
 	gnumake
 	greetd.tuigreet
