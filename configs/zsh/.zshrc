@@ -10,8 +10,10 @@ alias b='btop'
 alias c='clear'
 alias chypr='cd ~/.dotfiles/configs/hyprland'
 alias n='nvim'
+alias nconf='yazi ~/.dotfiles/configs'
 alias nflake='nvim ~/.dotfiles/flake.nix'
 alias nhome='nvim ~/.dotfiles/home.nix'
+alias nhost='yazi ~/.dotfiles/hosts'
 alias nhypr='nvim ~/.dotfiles/configs/hyprland/hyprland.conf'
 alias nnix='nvim ~/.dotfiles/hosts/System_Configs/system-configuration.nix'
 alias nzsh='nvim ~/.dotfiles/configs/zsh/.zshrc'
@@ -36,7 +38,7 @@ rebuild_flake() {
 
 _rebuild_flake_complete() {
   local -a hosts
-  hosts=("home-nixos" "laptop-nixos" "work-nixos") # add more if needed
+  hosts=("home-nixos" "laptop-nixos" "optiplex-nixos") # add more if needed
   _describe 'hosts' hosts
 }
 compdef _rebuild_flake_complete rebuild-flake
