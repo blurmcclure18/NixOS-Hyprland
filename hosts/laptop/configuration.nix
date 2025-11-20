@@ -7,4 +7,13 @@
     ];
 
   networking.hostName = "laptop-nixos"; # Define your hostname.
+
+    # Host Specific packages
+  environment.systemPackages = with pkgs; [
+
+  ] ++ (with unstable; [
+
+
+  ]);
+
 }

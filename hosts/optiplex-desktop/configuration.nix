@@ -13,4 +13,13 @@
 
   networking.hostName = "optiplex-nixos"; # Define your hostname.
 
+  # Host Specific packages
+  environment.systemPackages = with pkgs; [
+    mindustry
+
+  ] ++ (with unstable; [
+
+
+  ]);
+
 }
