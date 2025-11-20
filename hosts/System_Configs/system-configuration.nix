@@ -167,6 +167,8 @@
 	cmake
 	curl
 	discord
+	dua
+	dysk
 	firefox
 	fzf
 	gcc
