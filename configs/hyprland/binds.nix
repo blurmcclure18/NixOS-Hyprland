@@ -115,6 +115,10 @@
         ", XF86AudioStop, exec, $HOME/.config/hypr/scripts/MediaCtrl.sh --stop #playerctl stop"
         ", XF86AudioNext, exec, $HOME/.config/hypr/scripts/MediaCtrl.sh --nxt #playerctl next"
         ", XF86AudioPrev, exec, $HOME/.config/hypr/scripts/MediaCtrl.sh --prv #playerctl previous"
+
+        # Laptop Lid closure
+        ", switch:off:Lid Switch, exec, hyprctl keyword monitor 'eDP-1,preferred,auto,1'"
+        ", switch:on:Lid Switch, exec, hyprctl keyword monitor 'eDP-1,disable'"
       ];
     };
   };

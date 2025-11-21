@@ -37,7 +37,7 @@
 
   # Enable Systemd-logind to manage power events
   services.logind = {
-
+	
 	# Default behavior - suspend when closed
   	lidSwitch = "suspend";
 

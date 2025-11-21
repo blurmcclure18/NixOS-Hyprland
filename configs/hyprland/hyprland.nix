@@ -145,10 +145,6 @@
     monitor=DP-2,highres,auto,1.6
     monitor=DP-3,highres,auto,auto
 
-    # Turn off laptop screen when lid is closed
-    bindl = , switch:off:Lid Switch,exec,hyprctl keyword "eDP-1,preferred,auto,1"
-    bindl = , switch:on:Lid Switch,exec,hyprctl keyword "eDP-1,disable"
-
     # For passthrough keyboard into a VM
     bind = $mainMod SUPER, P, submap, passthru 
     submap = passthru
