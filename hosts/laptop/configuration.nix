@@ -3,6 +3,7 @@
   imports =
     [ # Include the results of the hardware scan.
 	./hardware-configuration.nix
+	../home-desktop/steam.nix
 	../System_Configs
     ];
 
@@ -12,7 +13,6 @@
   environment.systemPackages = with pkgs; [
 
   ] ++ (with unstable; [
-
 
   ]);
 
