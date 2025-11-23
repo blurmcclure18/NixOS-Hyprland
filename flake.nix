@@ -16,6 +16,10 @@
 
 		nix-gaming.url = "github:fufexan/nix-gaming";
 
+		zen-browser.url = "github:0xc000022070/zen-browser-flake";
+		zen-browser.inputs.nixpkgs.follows = "nixpkgs";
+		zen-browser.inputs.home-manager.follows = "home-manager";
+
 		plymouth-theme-omarchy = {
 			url = "github:blurmcclure18/plymouth-theme-omarchy";
 			flake = false;
@@ -69,7 +73,7 @@
 			alec = home-manager.lib.homeManagerConfiguration {
 				inherit pkgs;
 				modules = [ ./home.nix ];
-				extraSpecialArgs = { inherit unstable; };
+				extraSpecialArgs = { inherit inputs unstable; };
 			};
 		};
 	};

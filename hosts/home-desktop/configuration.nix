@@ -7,7 +7,6 @@
   imports =
     [ # Include the results of the hardware scan.
 	./hardware-configuration.nix
-	./star-citizen.nix
 	./steam.nix
 	../System_Configs
     ];
@@ -16,6 +15,7 @@
 
     # Host Specific packages
   environment.systemPackages = with pkgs; [
+	xfce.thunar
 
   ] ++ (with unstable; [
 
