@@ -10,7 +10,7 @@
 
   imports = [
     ./configs
-    inputs.zen-browser.homeModules.twilight
+    #inputs.zen-browser.homeModules.twilight
   ];
 
   # Home Manager needs a bit of information about you and the paths it should
@@ -106,7 +106,7 @@
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
   
-  programs.zen-browser = {
-	enable = true;
-  };
+	#  programs.zen-browser = {
+	#	enable = true;
+	#  };
 }
