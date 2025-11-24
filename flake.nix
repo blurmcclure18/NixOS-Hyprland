@@ -53,6 +53,7 @@
 				inherit system;
 				specialArgs = {inherit inputs self unstable;};
 				modules = [
+					nix-flat
 					./hosts/home-desktop/configuration.nix 
 					./hosts/home-desktop/hardware-configuration.nix
 					];

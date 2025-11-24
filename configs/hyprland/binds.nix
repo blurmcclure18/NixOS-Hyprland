@@ -5,7 +5,7 @@
     settings = {
 
       "$mainMod" = "ALT";
-      "$browser" = "firefox";
+      "$browser" = "flatpak run app.zen_browser.zen";
       "$terminal" = "alacritty";
       "$filemanager" = "thunar";
       "$menu" = "rofi -show drun -modi drun,filebrowser,run,window";
@@ -15,6 +15,8 @@
         "$mainMod, E, exec, $fileManager"
         "$mainMod, SPACE, exec, $menu"
         "$mainMod, RETURN, exec, $terminal"
+	"$mainMod, G, exec, steam"
+	"$mainMod, D, exec, discord"
         "$mainMod, Q, killactive,"
         "$mainMod, I, togglesplit"
         "$mainMod, F, fullscreen"
@@ -24,8 +26,8 @@
         "$mainMod CTRL, W, exec, $HOME/.config/hypr/scripts/WaybarStyles.sh"
         "$mainMod, W, exec, $HOME/.config/hypr/scripts/WallpaperSelect.sh"
         "$mainMod SHIFT, Q, exit,"
-        "$mainMod SHIFT, P, exec, $HOME/.config/hypr/scripts/RofiPowerProfiles-selector.sh"
-        "$mainMod SHIFT, F, fullscreen"
+        "SUPER SHIFT, P, exec, $HOME/.config/hypr/scripts/RofiPowerProfiles-selector.sh"
+        "$mainMod SHIFT, F, togglefloating"
         "$mainMod SHIFT, R, exec, pkill waybar && waybar"
         "$mainMod SHIFT, B, exec, home-manager switch --flake ~/.dotfiles"
         "$mainMod SHIFT, ESC, exit"
@@ -34,6 +36,10 @@
 
         # Play Music
         "CTRL SHIFT, M, exec, $HOME/.config/hypr/scripts/MyBeats.sh"
+
+	# Custom Media
+	"$mainMod SHIFT, P, exec, $HOME/.config/hypr/scripts/PanicButton.sh"
+	"CTRL SHIFT, P, exec, $HOME/.config/hypr/scripts/RandomVid.sh"
 
         # Move focus with mainMod + vim keys
         "$mainMod, H, movefocus, l"

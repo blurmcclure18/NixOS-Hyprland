@@ -30,10 +30,18 @@
   # Use the systemd-boot EFI boot loader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.systemd-boot.consoleMode = "auto";
+  boot.loader.systemd-boot.configurationLimit = 3;
   boot.loader.efi.canTouchEfiVariables = true;
 
   # Enable Experimental Features
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
+
+  # Enable Nix Garbage Collector
+  nix.gc = {
+	automatic = true;
+	dates = "weekly";
+	options = "--delete-older-than 7d";
+  };
 
   # Enable Systemd-logind to manage power events
   services.logind = {

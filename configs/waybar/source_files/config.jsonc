@@ -8,6 +8,7 @@
   "modules-center": ["custom/hypridle","clock"],
   "modules-right": [
     "custom/cava_mviz",
+    "group/tray-expander",
     "bluetooth",
     "network",
     "pulseaudio",

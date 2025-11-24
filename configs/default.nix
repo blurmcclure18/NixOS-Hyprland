@@ -10,7 +10,6 @@
 	./wallust
 	./waybar
 	./wlogout
-	./zen
 	./zsh
   ];
 }

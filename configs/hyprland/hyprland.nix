@@ -7,6 +7,7 @@
     ./hyprlock.nix
     ./hypridle.nix
     ./scripts
+    ./windowrules.nix
   ];
 
  wayland.windowManager.hyprland = {
@@ -129,12 +130,6 @@
         workspace_swipe = true;
       };
 
-      windowrule = [
-        "suppressevent maximize, class:.*"
-        "nofocus,class:^$,title:^$,xwayland:1,floating:1,fullscreen:0,pinned:0"
-        "tag +terminal, class:^(Alacritty)$"
-        "opacity 0.95 0.8, tag:terminal*"
-      ];
     };
 
   extraConfig = ''

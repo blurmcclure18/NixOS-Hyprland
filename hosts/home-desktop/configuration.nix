@@ -7,15 +7,25 @@
   imports =
     [ # Include the results of the hardware scan.
 	./hardware-configuration.nix
+	./nvidia.nix
 	./steam.nix
 	../System_Configs
     ];
+
+ # boot.loader.systemd-boot.extraEntries = {
+ #       "windows.conf" = '' 
+ #       	title Windows 11
+ #       	efi /EFI/Microsoft/Boot/bootmgfw.efi
+ #       '';
+ # };
 
   networking.hostName = "home-nixos"; # Define your hostname.
 
     # Host Specific packages
   environment.systemPackages = with pkgs; [
 	xfce.thunar
+	itch
+	wine-wayland
 
   ] ++ (with unstable; [
 

@@ -3,6 +3,7 @@
 {
   imports = [
     ./config.nix
+    ./modules.nix
     ./style.nix
   ];
 }

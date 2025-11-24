@@ -1,0 +1,66 @@
+/* ---- 💫 https://github.com/JaKooLit 💫 ---- */
+
+// ### DUAL TOP and BOTTOM ### //
+
+[{
+"include": "~/.config/waybar/modules",
+"layer": "top",
+//"mode": "dock",
+"exclusive": true,
+"passthrough": false,
+"position": "top",
+"spacing": 3,
+"fixed-center": true,
+"ipc": true,
+"margin-top": 1,
+"margin-left": 8,
+"margin-right": 8,
+
+"modules-left": [
+	"custom/cava_mviz",
+	"hyprland/window"
+	],
+  
+"modules-center": [
+	"idle_inhibitor",
+	"clock", 
+	"custom/lock"
+	], 
+
+"modules-right": [
+	"custom/weather",
+	"custom/updater"
+	]
+},
+
+{
+"include": "~/.config/waybar/modules",
+"layer": "top",
+//"mode": "dock",
+"exclusive": true,
+"passthrough": false,
+"position": "bottom",
+"spacing": 5,
+"fixed-center": true,
+"ipc": true,
+"height": 0,
+"margin-left": 8,
+"margin-right": 8,
+//"gtk-layer-shell": true,
+//"margin-bottom": 0,
+
+"modules-left": [
+	"cpu", 
+	"memory",
+	"disk" 
+
+	 ],
+
+"modules-center": [
+	"hyprland/workspaces#rw" 
+	],
+
+"modules-right": [
+	"tray"
+	]  
+}],
