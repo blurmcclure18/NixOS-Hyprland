@@ -41,6 +41,7 @@
 			"opacity 0.9 0.7, class:^([Ff]irefox|org.mozilla.firefox|[Ff]irefox-esr)$"
 			"opacity 0.9 0.8, class:^([Tt]hunar)$"
 			"opacity 0.9 0.8, class:^(Alacritty)$"
+			"opacity 0.9 0.8, class:^(Ghostty)$"
 			"opacity 0.9 0.8, class:^(nwg-look|qt5ct|qt6ct|yad)$"
 			"opacity 0.9 0.8, title:(Kvantum Manager)"
 			"opacity 0.94 0.86, class:^([Dd]iscord|[Vv]esktop)$"

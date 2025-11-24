@@ -180,6 +180,7 @@
 	firefox
 	fzf
 	gcc
+	ghostty
 	git
 	gnumake
 	greetd.tuigreet

@@ -6,7 +6,7 @@
 
       "$mainMod" = "ALT";
       "$browser" = "flatpak run app.zen_browser.zen";
-      "$terminal" = "alacritty";
+      "$terminal" = "ghostty";
       "$filemanager" = "thunar";
       "$menu" = "rofi -show drun -modi drun,filebrowser,run,window";
 
