@@ -25,7 +25,9 @@
   environment.systemPackages = with pkgs; [
 	xfce.thunar
 	itch
-	wine-wayland
+	wineWowPackages.stable
+	wineWowPackages.waylandFull
+	winetricks
 
   ] ++ (with unstable; [
 
