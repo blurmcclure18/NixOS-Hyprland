@@ -15,7 +15,10 @@
         }
       listener {
         timeout = 900
-        on-timeout = loginctl lock-session
-      }
+        on-timeout = loginctl lock-session & systemctl suspend
+        }
     '';
 }
+
+#loginctl lock-session
+
