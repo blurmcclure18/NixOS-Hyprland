@@ -18,6 +18,7 @@
     mindustry
 
   ] ++ (with unstable; [
+    omnissa-horizon-client
 
 
   ]);
