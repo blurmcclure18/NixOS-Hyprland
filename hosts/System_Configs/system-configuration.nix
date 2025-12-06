@@ -144,7 +144,7 @@
   # Define a user account. Don't forget to set a password with ‘passwd’.
    users.users.alec = {
    	isNormalUser = true;
-	extraGroups = [ "networkmanager" "wheel" ];
+	extraGroups = [ "input" "networkmanager" "wheel" ];
 	};
 
   nixpkgs.config = {
@@ -204,6 +204,7 @@
 	yt-dlp
   ] ++ (with unstable; [
 	#omnissa-horizon-client
+	espanso-wayland
 	spotify-player
 	wiremix
   ]);
