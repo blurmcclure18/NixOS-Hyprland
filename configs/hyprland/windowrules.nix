@@ -38,7 +38,6 @@
 			
 			# windowrule v2 - opacity #enable as desired
 			"opacity 0.9 0.6, class:^([Rr]ofi)$"
-			"opacity 0.9 0.7, class:^([Ff]irefox|org.mozilla.firefox|[Ff]irefox-esr)$"
 			"opacity 0.9 0.8, class:^([Tt]hunar)$"
 			"opacity 0.9 0.8, class:^(Alacritty)$"
 			"opacity 0.9 0.8, class:^(Ghostty)$"
