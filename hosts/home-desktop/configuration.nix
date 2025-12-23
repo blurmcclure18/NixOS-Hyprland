@@ -26,6 +26,9 @@
   environment.systemPackages = with pkgs; [
 	xfce.thunar
 	itch
+	protonvpn-gui
+	transmission_4-qt
+	unrar
 	wineWowPackages.stable
 	wineWowPackages.waylandFull
 	winetricks

@@ -16,6 +16,7 @@
   # Host Specific packages
   environment.systemPackages = with pkgs; [
     mindustry
+    remmina
 
   ] ++ (with unstable; [
     omnissa-horizon-client
