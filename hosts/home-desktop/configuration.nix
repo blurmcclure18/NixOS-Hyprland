@@ -21,6 +21,7 @@
  # };
 
   networking.hostName = "home-nixos"; # Define your hostname.
+  networking.nameservers = ["1.1.1.1" "8.8.8.8"];
 
     # Host Specific packages
   environment.systemPackages = with pkgs; [

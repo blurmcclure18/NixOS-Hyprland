@@ -135,7 +135,7 @@
   extraConfig = ''
     # Set Monitor Settings
     monitor=eDP-1,preferred,auto,1
-    monitor=HDMI-A-1,3840x1080,auto,auto
+    monitor=HDMI-A-1,preferred,auto,1
     monitor=DP-1,highres,auto,1
     monitor=DP-2,highres,auto,1.6
     monitor=DP-3,highres,auto,auto
