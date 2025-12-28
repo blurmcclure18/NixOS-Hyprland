@@ -24,7 +24,7 @@
 
     # Host Specific packages
   environment.systemPackages = with pkgs; [
-	xfce.thunar
+	geekbench
 	itch
 	protonvpn-gui
 	transmission_4-qt
@@ -32,6 +32,7 @@
 	wineWowPackages.stable
 	wineWowPackages.waylandFull
 	winetricks
+	xfce.thunar
 
   ] ++ (with unstable; [
 
