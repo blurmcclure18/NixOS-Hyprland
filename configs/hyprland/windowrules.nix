@@ -58,7 +58,7 @@
 			
 			# Picture-in-a-Picture (PIP) rules: Oddly, some need re-duplication.  This is because the window for
 			# PIP changes after on first launch, and will not inherant the rules...
-			"opacity 0.95 0.75,title:^(Picture-in-Picture)$"
+			#"opacity 0.95 0.75,title:^(Picture-in-Picture)$"
 			
 			# Interestingly, the opacity rule above doesn't need the reduplication?
 			"pin,title:^(Picture-in-Picture)$ "
