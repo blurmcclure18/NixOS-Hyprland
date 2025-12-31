@@ -14,6 +14,7 @@
 
   ] ++ (with unstable; [
     steam
+    itch
 
   ]);
 
