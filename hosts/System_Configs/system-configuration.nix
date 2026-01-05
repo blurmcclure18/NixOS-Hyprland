@@ -199,7 +199,7 @@
 	vim
 	wget
 	unzip
-	vmware-horizon-client
+	omnissa-horizon-client
 	yazi
 	yt-dlp
   ] ++ (with unstable; [
