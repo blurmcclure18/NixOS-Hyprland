@@ -154,7 +154,7 @@
     cliphist
     hyprlock
     hypridle
-    rofi-wayland
+    rofi
     swww
     wallust
     waybar
