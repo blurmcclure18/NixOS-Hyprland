@@ -26,6 +26,7 @@
     # Host Specific packages
   environment.systemPackages = with pkgs; [
 	geekbench
+	gencfsm
 	itch
 	protonvpn-gui
 	transmission_4-qt
