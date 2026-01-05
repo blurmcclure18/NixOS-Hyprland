@@ -3,12 +3,12 @@
 
 	inputs = {
 		# Stable Packages Branch
-		nixpkgs.url = "nixpkgs/nixos-25.05";
+		nixpkgs.url = "nixpkgs/nixos-25.11";
 
 		# Unstable Packages Branch
 		nixpkgs-unstable.url = "nixpkgs/nixos-unstable";
 
-		home-manager.url = "github:nix-community/home-manager/release-25.05";
+		home-manager.url = "github:nix-community/home-manager/release-25.11";
 
 		home-manager.inputs.nixpkgs.follows = "nixpkgs";
 
