@@ -126,9 +126,9 @@
 	no_hardware_cursors = true;
       };
 
-      gestures = {
-        workspace_swipe = true;
-      };
+      gesture = [" 3, horizontal, workspace"];
+      #  workspace_swipe = true;
+      #};
 
     };
 
