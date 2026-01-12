@@ -44,16 +44,16 @@
   };
 
   # Enable Systemd-logind to manage power events
-  services.logind = {
+  services.logind.settings.Login = {
 	
 	# Default behavior - suspend when closed
-  	lidSwitch = "suspend";
+  	HandleLidSwitch = "suspend";
 
   	# Don't suspend when external monitor (dock) is active
-  	lidSwitchDocked = "ignore";
+  	HandleLidSwitchDocked = "ignore";
 
   	# When user is idle and closes lid, same as lidSwitch
-  	lidSwitchExternalPower = "suspend";
+  	HandleLidSwitchExternalPower = "suspend";
   };
 
   # Enable acpid service
@@ -93,7 +93,7 @@
 	enable = true;
 	settings = {
 		default_session = {
-			command = "${pkgs.greetd.tuigreet}/bin/tuigreet --time --cmd Hyprland";
+			command = "${pkgs.tuigreet}/bin/tuigreet --time --cmd Hyprland";
 			user = "alec";
 		};
 	};
@@ -183,7 +183,7 @@
 	ghostty
 	git
 	gnumake
-	greetd.tuigreet
+	tuigreet
 	impala
 	mpv
 	neovim
