@@ -29,7 +29,8 @@
 			"float, class:^(file-roller|org.gnome.FileRoller)$ # archive manager"
 			"float, class:^([Bb]aobab|org.gnome.[Bb]aobab)$ # Disk usage analyzer"
 			"float, title:(Kvantum Manager)"
-			"float, class:^([Ss]team)$,title:^((?![Ss]team).*|[Ss]team [Ss]ettings)$"
+			#"float, class:^([Ss]team)$,title:^((?![Ss]team).*|[Ss]team [Ss]ettings)$"
+			"float, class:^([Ss]team)$, title:!^([Ss]team)$"
 			"float, class:^([Qq]alculate-gtk)$"
 			
 			# windowrule v2 - position
