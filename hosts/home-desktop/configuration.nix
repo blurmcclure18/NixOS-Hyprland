@@ -25,11 +25,9 @@
 
     # Host Specific packages
   environment.systemPackages = with pkgs; [
-	geekbench
 	gencfsm
 	itch
 	protonvpn-gui
-	phoronix-test-suite
 	transmission_4-qt
 	unrar
 	wineWowPackages.stable
