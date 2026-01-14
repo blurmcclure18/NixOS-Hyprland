@@ -158,7 +158,7 @@
           if [[ "__DOLLAR__choice" == "__DOLLAR__RANDOM_PIC_NAME" ]]; then
             RANDOM_PIC="__DOLLAR__{PICS[RANDOM % __DOLLAR__{#PICS[@]}]}"
             swww img -o "__DOLLAR__focused_monitor" "__DOLLAR__RANDOM_PIC" "__DOLLAR__{SWWW_PARAMS[@]}"
-            #exit 0
+            run_wallust "__DOLLAR__RANDOM_PIC"
           fi
         
           # Find selected file safely
@@ -166,15 +166,12 @@
             filename=__DOLLAR__(basename "__DOLLAR__pic_path")
             if [[ "__DOLLAR__filename" == "__DOLLAR__choice"* ]]; then
               swww img -o "__DOLLAR__focused_monitor" "__DOLLAR__pic_path" "__DOLLAR__{SWWW_PARAMS[@]}"
-              #exit 0
+              run_wallust "__DOLLAR__pic_path"
             fi
           done
         
           sleep 0.5
-          #__DOLLAR__HOME/.config/hypr/scripts/WallustSwww.sh
-          run_wallust
-        
-          sleep 0.2
+
           #__DOLLAR__HOME/.config/hypr/scripts/Refresh.sh
           run_refresh
         
@@ -182,7 +179,6 @@
         #  echo "Starting Waybar..."
         #  waybar &
         
-          echo "Image not found."
           exit 1
         }
         
