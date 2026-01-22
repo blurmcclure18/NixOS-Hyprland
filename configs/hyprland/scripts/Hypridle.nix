@@ -6,6 +6,11 @@
 	text = '' 
 		#!/bin/sh
 		# This is for custom version of waybar idle_inhibitor which activates / deactivates hypridle instead
+
+		source $HOME/.config/hypr/wallust/wallust-hypridle.conf
+
+		# convert color for hyprctl
+		notify_color=$color3
 		
 		PROCESS="hypridle"
 		
@@ -20,7 +25,10 @@
 		    if pgrep -x "$PROCESS" >/dev/null; then
 		        pkill "$PROCESS"
 			echo "Killed $PROCESS"
+			hyprctl dismissnotify && hyprctl notify -1 5000 $notify_color "fontsize:15 Stopped Hypridle"
+
 		    else
+			hyprctl dismissnotify && hyprctl notify -1 5000 $notify_color "fontsize:15 Started Hypridle"
 		        "$PROCESS"
 		    fi
 		else

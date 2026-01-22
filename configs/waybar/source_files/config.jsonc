@@ -50,7 +50,7 @@
     "interval":0
   },
 
-  // Hypridle inhibitor
+// Hypridle inhibitor
   "custom/hypridle": {
 	"format": "󱫗 ",
 	"return-type": "json",
