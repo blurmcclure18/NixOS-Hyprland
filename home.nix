@@ -27,6 +27,16 @@
   # release notes.
   home.stateVersion = "25.05"; # Please read the comment before changing.
 
+  # udiskie service
+  services.udiskie = {
+    enable = true;
+    settings = {
+      program_options = {
+	  file_manager = "${pkgs.xfce.thunar}/bin/thunar";
+      };
+    };
+  };
+
   # The home.packages option allows you to install Nix packages into your
   # environment.
   home.packages = with pkgs;[

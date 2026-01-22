@@ -109,6 +109,9 @@
   # Enable CUPS to print documents.
    services.printing.enable = true;
 
+  # USB auto-mount service
+  services.udisks2.enable = true;
+
   # Set the default shell for all users
    programs.zsh = {
 	enable = true;
