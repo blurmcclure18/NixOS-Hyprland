@@ -59,6 +59,15 @@
   # Enable acpid service
   services.acpid.enable = true;
 
+  # enable polkit
+  security.polkit.enable = true;
+
+  # enable XDG
+  xdg.portal.enable = true;
+  xdg.portal.extraPortals = [
+	pkgs.xdg-desktop-portal-gtk
+	];
+
   # Enable Bluetooth
   hardware.bluetooth = {
 	enable = true;
