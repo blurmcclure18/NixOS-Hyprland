@@ -45,6 +45,7 @@
     file-roller
     mediawriter
     obsidian
+    chromium
     usbutils
     xfce.thunar
     # # Adds the "hello" command to your environment. It prints a friendly

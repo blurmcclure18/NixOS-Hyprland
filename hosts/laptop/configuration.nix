@@ -9,8 +9,15 @@
 
   networking.hostName = "laptop-nixos"; # Define your hostname.
 
-    # Host Specific packages
+  # Enable Podman
+  virtualisation.podman.enable = true;
+
+  # Ensure Systemd-resolved is enabled for VPN DNS handling
+  services.resolved.enable = true;
+
+  # Host Specific packages
   environment.systemPackages = with pkgs; [
+    distrobox
 
   ] ++ (with unstable; [
     steam

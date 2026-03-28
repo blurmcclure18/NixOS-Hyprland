@@ -74,6 +74,9 @@
 	powerOnBoot = true;
   };
 
+  # Enable QMK access for non-root users
+  hardware.keyboard.qmk.enable = true;
+
   services.blueman.enable = true;
 
   networking.networkmanager = {
@@ -171,7 +174,6 @@
 	noto-fonts-cjk-sans
 	noto-fonts-color-emoji
     ];
-
 
   # List packages installed in system profile.
   # You can use https://search.nixos.org/ to find more packages (and options).
