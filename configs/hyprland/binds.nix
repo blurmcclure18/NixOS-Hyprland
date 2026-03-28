@@ -38,8 +38,8 @@
         "CTRL SHIFT, M, exec, $HOME/.config/hypr/scripts/MyBeats.sh"
 
 	# Custom Media
-	"$mainMod SHIFT, P, exec, $HOME/.config/hypr/scripts/PanicButton.sh"
-	"CTRL SHIFT, P, exec, $HOME/.config/hypr/scripts/RandomVid.sh"
+	"$SUPER SHIFT, P, exec, $HOME/.config/hypr/scripts/PanicButton.sh"
+	"$mainMod SHIFT, P, exec, $HOME/.config/hypr/scripts/RandomVid.sh"
 
         # Move focus with mainMod + vim keys
         "$mainMod, H, movefocus, l"

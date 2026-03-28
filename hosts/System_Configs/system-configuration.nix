@@ -166,15 +166,30 @@
     allowUnfree = true;
   };
 
-  fonts.packages = with pkgs; [
+  fonts = {
+	enableDefaultPackages = true;
+
+	packages = with pkgs; [
 	fira-code
 	jetbrains-mono
 	nerd-fonts.caskaydia-mono
 	noto-fonts
 	noto-fonts-cjk-sans
 	noto-fonts-color-emoji
-    ];
 
+<<<<<<< HEAD
+=======
+	# Horizon Fonts Test
+	dejavu_fonts
+	liberation_ttf
+	];
+
+	fontconfig.enable = true;
+	fontDir.enable = true;
+
+    };
+
+>>>>>>> ab9cde9b174acd4bc71fe7266168ae72972c98ff
   # List packages installed in system profile.
   # You can use https://search.nixos.org/ to find more packages (and options).
   environment.systemPackages = with pkgs; [
@@ -213,11 +228,9 @@
 	vim
 	wget
 	unzip
-	omnissa-horizon-client
 	yazi
 	yt-dlp
   ] ++ (with unstable; [
-	#omnissa-horizon-client
 	espanso-wayland
 	spotify-player
 	wiremix

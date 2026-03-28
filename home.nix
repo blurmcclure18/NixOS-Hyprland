@@ -1,5 +1,4 @@
 { config, lib, pkgs, inputs, unstable, ... }:
-
 {
   nixpkgs = {
     config = {
@@ -37,15 +36,25 @@
     };
   };
 
+  fonts.fontconfig.enable = true;
+
   # The home.packages option allows you to install Nix packages into your
   # environment.
   home.packages = with pkgs;[
+    baobab
     calc
     cava
     file-roller
+    flameshot
+    grim
     mediawriter
     obsidian
+<<<<<<< HEAD
     chromium
+=======
+    omnissa-horizon-client
+    remmina
+>>>>>>> ab9cde9b174acd4bc71fe7266168ae72972c98ff
     usbutils
     xfce.thunar
     # # Adds the "hello" command to your environment. It prints a friendly
@@ -126,3 +135,4 @@
 	#	enable = true;
 	#  };
 }
+
