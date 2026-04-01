@@ -122,6 +122,12 @@
         };
       };
 
+      device = {
+        name = "logitech-mx-ergo-1";
+        sensitivity = 0.0;
+        accel_profile = "flat";
+      };
+
       cursor = {
 	no_hardware_cursors = true;
       };
