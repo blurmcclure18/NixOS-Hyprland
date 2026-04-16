@@ -50,7 +50,7 @@
     mediawriter
     obsidian
     chromium
-    #omnissa-horizon-client
+    omnissa-horizon-client
     remmina
     usbutils
     xfce.thunar

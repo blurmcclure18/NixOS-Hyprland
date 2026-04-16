@@ -177,9 +177,9 @@
 	noto-fonts-cjk-sans
 	noto-fonts-color-emoji
 
-	## Horizon Fonts Test
-	#dejavu_fonts
-	#liberation_ttf
+	# Horizon Fonts Test
+	dejavu_fonts
+	liberation_ttf
 	];
 
 	#fontconfig.enable = true;
