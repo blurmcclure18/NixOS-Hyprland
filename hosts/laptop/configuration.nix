@@ -20,6 +20,7 @@
     distrobox
 
   ] ++ (with unstable; [
+    omnissa-horizon-client
     steam
     itch
 

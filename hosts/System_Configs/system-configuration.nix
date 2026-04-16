@@ -177,19 +177,16 @@
 	noto-fonts-cjk-sans
 	noto-fonts-color-emoji
 
-<<<<<<< HEAD
-=======
-	# Horizon Fonts Test
-	dejavu_fonts
-	liberation_ttf
+	## Horizon Fonts Test
+	#dejavu_fonts
+	#liberation_ttf
 	];
 
-	fontconfig.enable = true;
-	fontDir.enable = true;
+	#fontconfig.enable = true;
+	#fontDir.enable = true;
 
     };
 
->>>>>>> ab9cde9b174acd4bc71fe7266168ae72972c98ff
   # List packages installed in system profile.
   # You can use https://search.nixos.org/ to find more packages (and options).
   environment.systemPackages = with pkgs; [
@@ -218,6 +215,7 @@
 	neovim
 	networkmanagerapplet
 	nix-search-cli
+	#omnissa-horizon-client
 	openconnect
 	pamixer
 	pavucontrol
