@@ -44,8 +44,10 @@
     baobab
     calc
     cava
+    dejavu_fonts
     file-roller
     flameshot
+    fontconfig
     grim
     mediawriter
     obsidian
@@ -88,6 +90,7 @@
 
   home.sessionVariables = {
     HYPRLAND_CONFIG = "${config.home.homeDirectory}/.dotfiles/configs/hyprland/hyprland.conf";
+    FONTCONFIG_PATH = "/run/current-system/sw/etc/fonts";
   };
 
   # Home Manager can also manage your environment variables through

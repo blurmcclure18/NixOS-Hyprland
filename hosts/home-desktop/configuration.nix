@@ -25,7 +25,13 @@
 
     # Host Specific packages
   environment.systemPackages = with pkgs; [
+	dconf
+	dejavu_fonts
+	fontconfig
 	gencfsm
+	gsettings-desktop-schemas
+	gtk3
+	glib
 	itch
 	protonvpn-gui
 	transmission_4-qt
