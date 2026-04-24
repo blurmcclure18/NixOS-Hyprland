@@ -20,6 +20,8 @@
  #       '';
  # };
 
+  boot.kernelPackages = pkgs.linuxPackages_latest;
+
   networking.hostName = "home-nixos"; # Define your hostname.
   networking.nameservers = ["1.1.1.1" "8.8.8.8"];
 
