@@ -24,11 +24,17 @@ alias nzsh='nvim ~/.dotfiles/configs/zsh/zshconfig'
 alias rebuild-flake='rebuild_flake'
 alias rebuild-home='home-manager switch --flake ~/.dotfiles'
 alias nsearch='custom_nix_search'
+alias unsearch='custom_nix_search_unstable'
 alias :vpn="sudo openconnect cva.uscourts.gov --user=alecmcclure --useragent='AnyConnect'"
 
 custom_nix_search() {
   local query="$*"
-  nix-search -c "25.05" "$query"
+  nix-search -c "25.11" "$query"
+}
+
+custom_nix_search_unstable() {
+  local query="$*"
+  nix-search -c "unstable" "$query"
 }
 
 rebuild_flake() {

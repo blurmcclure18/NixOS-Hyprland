@@ -20,7 +20,7 @@
  #       '';
  # };
 
-  boot.kernelPackages = pkgs.linuxPackages_latest;
+  boot.kernelPackages = pkgs.linuxPackages_6_18;
 
   networking.hostName = "home-nixos"; # Define your hostname.
   networking.nameservers = ["1.1.1.1" "8.8.8.8"];
@@ -38,13 +38,18 @@
 	protonvpn-gui
 	transmission_4-qt
 	unrar
-	wineWowPackages.stable
-	wineWowPackages.waylandFull
-	winetricks
+	# wineWowPackages.stable
+	# wineWowPackages.waylandFull
+	# winetricks
 	xfce.thunar
 
   ] ++ (with unstable; [
-
+	wine
+	wine64
+	wine-wayland
+	wineWow64Packages.stable
+	wineWow64Packages.wayland
+	winetricks
 
   ]);
 
