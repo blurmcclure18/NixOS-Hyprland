@@ -6,6 +6,7 @@
 {
   imports =
     [ # Include the results of the hardware scan.
+	./games.nix
 	./hardware-configuration.nix
 	./nvidia.nix
 	./star-citizen.nix
