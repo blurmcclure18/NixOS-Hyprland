@@ -6,12 +6,12 @@
     update.auto.enable = false;
     uninstallUnmanaged = false;
 
-    packages = [
-      { 
-        #appId = "app.zen_browser.zen";
-        #origin = "flathub";
-      }
-    ];
+    #packages = [
+    #  {
+    #    appId = "app.zen_browser.zen";
+    #    origin = "flathub";
+    #  }
+    #];
   };
 }
 

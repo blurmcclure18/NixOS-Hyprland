@@ -5,7 +5,7 @@
     settings = {
 
       "$mainMod" = "ALT";
-      "$browser" = "flatpak run app.zen_browser.zen";
+      "$browser" = "zen";#"flatpak run app.zen_browser.zen";
       "$terminal" = "ghostty";
       "$filemanager" = "thunar";
       "$menu" = "rofi -show drun -modi drun,filebrowser,run,window";
