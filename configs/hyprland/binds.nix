@@ -29,7 +29,7 @@
         "SUPER SHIFT, P, exec, $HOME/.config/hypr/scripts/RofiPowerProfiles-selector.sh"
         "$mainMod SHIFT, F, togglefloating"
         "$mainMod SHIFT, R, exec, pkill waybar && waybar"
-        "$mainMod SHIFT, B, exec, home-manager switch --flake ~/.dotfiles"
+        ''$mainMod SHIFT, B, exec, home-manager switch --flake ~/.dotfiles && hyprctl notify 5 6000 "rgb(B9725B)" "fontsize:16 Rebuilt Home-Manager"''
         "$mainMod SHIFT, ESC, exit"
         ''SUPER, S, exec, grim -g "$(slurp)" - | swappy -f -''
 
