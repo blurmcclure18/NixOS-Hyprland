@@ -8,17 +8,23 @@
 		# Unstable Packages Branch
 		nixpkgs-unstable.url = "nixpkgs/nixos-unstable";
 
-		home-manager.url = "github:nix-community/home-manager/release-25.11";
+		home-manager = {
+			url = "github:nix-community/home-manager/release-25.11";
 
-		home-manager.inputs.nixpkgs.follows = "nixpkgs";
+			inputs.nixpkgs.follows = "nixpkgs";
+		};
 
 		nix-flatpak.url = "github:gmodena/nix-flatpak";
 
 		nix-gaming.url = "github:fufexan/nix-gaming";
 
-		zen-browser.url = "github:0xc000022070/zen-browser-flake";
-		zen-browser.inputs.nixpkgs.follows = "nixpkgs";
-		zen-browser.inputs.home-manager.follows = "home-manager";
+		zen-browser = {
+			url = "github:youwen5/zen-browser-flake";
+			inputs = {
+				nixpkgs.follows = "nixpkgs";
+				home-manager.follows = "home-manager";
+			};
+		};
 
 		plymouth-theme-omarchy = {
 			url = "github:blurmcclure18/plymouth-theme-omarchy";
@@ -27,6 +33,7 @@
 	};
 
 	outputs = { home-manager, nixpkgs, nixpkgs-unstable, nix-flatpak, self, ...}@inputs:
+
 	  let
 		system = "x86_64-linux";
 		lib = nixpkgs.lib;
@@ -43,7 +50,7 @@
 				inherit system;
 				specialArgs = {inherit self unstable;};
 				modules = [
-					nix-flatpak.nixosModules.nix-flatpak
+					nix-flat
 					./hosts/laptop/configuration.nix
 					./hosts/laptop/hardware-configuration.nix
 				];
@@ -58,6 +65,7 @@
 					./hosts/home-desktop/hardware-configuration.nix
 					];
 			};
+
 			optiplex-nixos = lib.nixosSystem {
 				inherit system;
 				specialArgs = {inherit self unstable;};

@@ -28,6 +28,7 @@
 
     # Host Specific packages
   environment.systemPackages = with pkgs; [
+	inputs.zen-browser.packages.${pkgs.stdenv.hostPlatform.system}.default
 	dconf
 	dejavu_fonts
 	fontconfig

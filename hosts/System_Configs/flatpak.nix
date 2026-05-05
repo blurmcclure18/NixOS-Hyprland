@@ -7,7 +7,10 @@
     uninstallUnmanaged = false;
 
     packages = [
-      { appId = "app.zen_browser.zen"; origin = "flathub";}
+      { 
+        #appId = "app.zen_browser.zen";
+        #origin = "flathub";
+      }
     ];
   };
 }
