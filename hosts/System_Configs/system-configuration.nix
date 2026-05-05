@@ -1,4 +1,4 @@
-{configs, lib, pkgs, unstable, self, ... }:
+{configs, inputs, lib, pkgs, unstable, self, ... }:
 
 {
   boot = {
@@ -211,6 +211,7 @@
 	gnumake
 	tuigreet
 	impala
+	inputs.zen-browser.packages.${pkgs.stdenv.hostPlatform.system}.default
 	mpv
 	neovim
 	networkmanagerapplet
