@@ -31,7 +31,7 @@
     enable = true;
     settings = {
       program_options = {
-	  file_manager = "${pkgs.xfce.thunar}/bin/thunar";
+	  file_manager = "${pkgs.nautilus}/bin/nautilus";
       };
     };
   };
@@ -44,18 +44,21 @@
     baobab
     calc
     cava
+    chromium
     dejavu_fonts
     file-roller
-    flameshot
     fontconfig
     grim
     mediawriter
+    nautilus
+    nwg-look
     obsidian
-    chromium
     omnissa-horizon-client
     remmina
+    slurp
+    swappy
+    tokyonight-gtk-theme
     usbutils
-    xfce.thunar
     # # Adds the "hello" command to your environment. It prints a friendly
     # # "Hello, world!" when run.
 
@@ -91,6 +94,7 @@
   home.sessionVariables = {
     HYPRLAND_CONFIG = "${config.home.homeDirectory}/.dotfiles/configs/hyprland/hyprland.conf";
     FONTCONFIG_PATH = "/run/current-system/sw/etc/fonts";
+    GTK_THEME = "Tokyonight-Dark-B";
   };
 
   # Home Manager can also manage your environment variables through

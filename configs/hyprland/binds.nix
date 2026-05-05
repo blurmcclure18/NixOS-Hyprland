@@ -5,14 +5,14 @@
     settings = {
 
       "$mainMod" = "ALT";
-      "$browser" = "zen";#"flatpak run app.zen_browser.zen";
+      "$browser" = "zen";
       "$terminal" = "ghostty";
-      "$filemanager" = "thunar";
+      "$filemanager" = "nautilus";
       "$menu" = "rofi -show drun -modi drun,filebrowser,run,window";
 
       bind = [
         "$mainMod, N, exec, $browser"
-        "$mainMod, E, exec, $fileManager"
+        "$mainMod, E, exec, $filemanager"
         "$mainMod, SPACE, exec, $menu"
         "$mainMod, RETURN, exec, $terminal"
 	"$mainMod, G, exec, steam"
@@ -31,6 +31,7 @@
         "$mainMod SHIFT, R, exec, pkill waybar && waybar"
         "$mainMod SHIFT, B, exec, home-manager switch --flake ~/.dotfiles"
         "$mainMod SHIFT, ESC, exit"
+        ''SUPER, S, exec, grim -g "$(slurp)" - | swappy -f -''
 
         "SUPER, L, exec, hyprlock"
 
