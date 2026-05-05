@@ -3,6 +3,6 @@
 {
   imports = [
     ./system-configuration.nix
-    ./flatpak.nix
+    #./flatpak.nix
   ];
 }

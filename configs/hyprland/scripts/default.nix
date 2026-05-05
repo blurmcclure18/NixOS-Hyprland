@@ -6,6 +6,7 @@
     ./hypridle-notify.nix
     ./MyBeats.nix
     ./MyBrightness.nix
+    ./MyVids.nix
     ./MyVolume.nix
     ./MediaCtrl.nix 
     ./PanicButton.nix

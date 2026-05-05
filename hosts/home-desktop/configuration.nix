@@ -31,10 +31,10 @@
 	dconf
 	dejavu_fonts
 	fontconfig
-	gencfsm
 	gsettings-desktop-schemas
 	gtk3
 	glib
+	gocryptfs
 	itch
 	protonvpn-gui
 	transmission_4-qt
@@ -42,6 +42,7 @@
 	# wineWowPackages.stable
 	# wineWowPackages.waylandFull
 	# winetricks
+	zenity
 
   ] ++ (with unstable; [
 	wine

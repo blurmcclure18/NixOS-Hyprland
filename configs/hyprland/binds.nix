@@ -41,6 +41,7 @@
 	# Custom Media
 	"$SUPER SHIFT, P, exec, $HOME/.config/hypr/scripts/PanicButton.sh"
 	"$mainMod CTRL SHIFT SUPER, P, exec, $HOME/.config/hypr/scripts/RandomVid.sh"
+        "$mainMod CTRL SHIFT SUPER, H, exec, $HOME/.config/hypr/scripts/MyVids.sh"
 
         # Move focus with mainMod + vim keys
         "$mainMod, H, movefocus, l"
