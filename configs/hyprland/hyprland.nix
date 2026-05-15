@@ -142,9 +142,6 @@
     # Set Monitor Settings
     monitor=eDP-1,preferred,auto,1
     monitor=HDMI-A-1,preferred,auto,auto
-    monitor=DP-1,highres,auto,1
-    monitor=DP-2,highres,auto,1
-    monitor=DP-3,highres,auto,auto
 
     # For passthrough keyboard into a VM
     bind = $mainMod SUPER, P, submap, passthru 
