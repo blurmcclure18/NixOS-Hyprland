@@ -19,12 +19,10 @@
     memoryMax = 32 * 1024 * 1024 * 1024;  # 32 GB ZRAM
   };
 
-  environment.systemPackages = [ # or home.packages
-    inputs.nix-gaming.packages.${pkgs.stdenv.hostPlatform.system}.star-citizen
+  environment.systemPackages = [
+    inputs.nix-gaming.packages.${system}.rsi-launcher
 
-    
    # Possibly required to fix audio
-
    # inputs.nix-gaming.packages.${pkgs.stdenv.hostPlatform.system}.star-citizen.override {
    #     tricks = [ "arial" "vcrun2019" "win10" "sound=alsa" ];
    # };
