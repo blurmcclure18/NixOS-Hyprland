@@ -7,6 +7,8 @@
 	../System_Configs
     ];
 
+  boot.kernelPackages = pkgs.linuxPackages_6_18;
+
   networking.hostName = "laptop-nixos"; # Define your hostname.
 
   # Enable Podman
