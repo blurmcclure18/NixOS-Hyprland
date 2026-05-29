@@ -9,7 +9,7 @@
       # Source Colors
       source $HOME/.config/hypr/wallust/wallust-hypridle.conf
 
-      lofi_link="https://www.youtube.com/live/jfKfPfyJRdk?si=PnJIA9ErQIAw6-qd"
+      lofi_link="https://www.youtube.com/watch?v=EWrX250Zhko"
       
       sDIR="$HOME/.config/hypr/scripts"
       
