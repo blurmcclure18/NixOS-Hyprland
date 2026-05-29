@@ -197,6 +197,7 @@
 	bluez
 	btop
 	brightnessctl
+	cargo
 	clang
 	cmake
 	curl
@@ -231,7 +232,6 @@
 	yt-dlp
   ] ++ (with unstable; [
 	espanso-wayland
-	spotify-player
 	wiremix
   ]);
   # Enable MPRIS for MPV
