@@ -49,7 +49,7 @@
 
 			laptop-nixos = lib.nixosSystem {
 				inherit system;
-				specialArgs = {inherit self unstable;};
+				specialArgs = {inherit inputs self unstable;};
 				modules = [
 					nix-flat
 					./hosts/laptop/configuration.nix
