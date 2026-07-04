@@ -45,11 +45,7 @@
 	zenity
 
   ] ++ (with unstable; [
-	wine
-	wine64
-	wine-wayland
 	wineWow64Packages.stable
-	wineWow64Packages.wayland
 	winetricks
 
   ]);

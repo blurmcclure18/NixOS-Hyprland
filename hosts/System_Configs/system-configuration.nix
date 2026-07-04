@@ -119,7 +119,7 @@
   services.displayManager.autoLogin.user = "alec";
 
   # Enable CUPS to print documents.
-   services.printing.enable = true;
+  services.printing.enable = true;
 
   # USB auto-mount service
   services.udisks2.enable = true;
@@ -210,7 +210,6 @@
 	ghostty
 	git
 	gnumake
-	tuigreet
 	impala
 	inputs.zen-browser.packages.${pkgs.stdenv.hostPlatform.system}.default
 	mpv
@@ -225,6 +224,7 @@
 	power-profiles-daemon
 	python314
 	ripgrep
+	tuigreet
 	vim
 	wget
 	unzip
