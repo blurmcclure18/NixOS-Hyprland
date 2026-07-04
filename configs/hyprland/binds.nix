@@ -18,7 +18,7 @@
 	"$mainMod, G, exec, steam"
 	"$mainMod, D, exec, discord"
         "$mainMod, Q, killactive,"
-        "$mainMod, I, togglesplit"
+        #"$mainMod, I, togglesplit"
         "$mainMod, F, fullscreen"
         "$mainMod, P, exec, wlogout"
         "$mainMod, R, exec, $HOME/.config/hypr/scripts/RofiThemeSelector-modified.sh"

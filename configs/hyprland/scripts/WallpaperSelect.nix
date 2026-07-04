@@ -20,12 +20,12 @@
         SCRIPTSDIR="__DOLLAR__HOME/.config/hypr/scripts"
         focused_monitor=__DOLLAR__(hyprctl monitors | awk '/^Monitor/{name=__DOLLAR__2} /focused: yes/{print name}')
         
-        # swww transition config
+        # awww transition config
         FPS=144
         TYPE="any"
         DURATION=2
         BEZIER=".43,1.19,1,.4"
-        SWWW_PARAMS=(--transition-fps "__DOLLAR__FPS" --transition-type "__DOLLAR__TYPE" --transition-duration "__DOLLAR__DURATION")
+        AWWW_PARAMS=(--transition-fps "__DOLLAR__FPS" --transition-type "__DOLLAR__TYPE" --transition-duration "__DOLLAR__DURATION")
         
         # 🧠 SAFE retrieval of image files (null-separated, preserves spaces/quotes)
         mapfile -d '__QUOTE__ PICS < <(find "__DOLLAR__wallDIR" -type f \( -iname '*.jpg' -o -iname '*.jpeg' -o -iname '*.png' -o -iname '*.gif' \) -print0)
@@ -59,8 +59,8 @@
           done
         }
         
-        # Start swww if not running
-        swww query >/dev/null 2>&1 || swww-daemon --format xrgb
+        # Start awww if not running
+        awww query >/dev/null 2>&1 || awww-daemon --format xrgb
         
         run_refresh() {
           # Define file_exists function
@@ -94,7 +94,7 @@
         run_wallust() {
           # Inputs and paths
           passed_path="__DOLLAR__{1:-}"
-          cache_dir="__DOLLAR__HOME/.cache/swww/"
+          cache_dir="__DOLLAR__HOME/.cache/awww/"
           rofi_link="__DOLLAR__HOME/.config/rofi/.current_wallpaper"
           #rofi_link="__DOLLAR__HOME/.dotfiles/configs/rofi/.current_wallpaper"
           #wallpaper_current="__DOLLAR__HOME/.dotfiles/configs/hyprland/wallpaper_effects/.wallpaper_current"
@@ -114,11 +114,11 @@
           if [[ -n "__DOLLAR__passed_path" && -f "__DOLLAR__passed_path" ]]; then
             wallpaper_path="__DOLLAR__passed_path"
           else
-            # Try to read from swww cache for the focused monitor, with a short retry loop
+            # Try to read from awww cache for the focused monitor, with a short retry loop
             current_monitor="__DOLLAR__(get_focused_monitor)"
             cache_file="__DOLLAR__cache_dir__DOLLAR__current_monitor"
           
-            # Wait briefly for swww to write its cache after an image change
+            # Wait briefly for awww to write its cache after an image change
             for i in {1..10}; do
               if [[ -f "__DOLLAR__cache_file" ]]; then
                 break
@@ -157,7 +157,7 @@
           # Random choice
           if [[ "__DOLLAR__choice" == "__DOLLAR__RANDOM_PIC_NAME" ]]; then
             RANDOM_PIC="__DOLLAR__{PICS[RANDOM % __DOLLAR__{#PICS[@]}]}"
-            swww img -o "__DOLLAR__focused_monitor" "__DOLLAR__RANDOM_PIC" "__DOLLAR__{SWWW_PARAMS[@]}"
+            awww img -o "__DOLLAR__focused_monitor" "__DOLLAR__RANDOM_PIC" "__DOLLAR__{AWWW_PARAMS[@]}"
             run_wallust "__DOLLAR__RANDOM_PIC"
           fi
         
@@ -165,7 +165,7 @@
           for pic_path in "__DOLLAR__{PICS[@]}"; do
             filename=__DOLLAR__(basename "__DOLLAR__pic_path")
             if [[ "__DOLLAR__filename" == "__DOLLAR__choice"* ]]; then
-              swww img -o "__DOLLAR__focused_monitor" "__DOLLAR__pic_path" "__DOLLAR__{SWWW_PARAMS[@]}"
+              awww img -o "__DOLLAR__focused_monitor" "__DOLLAR__pic_path" "__DOLLAR__{AWWW_PARAMS[@]}"
               run_wallust "__DOLLAR__pic_path"
             fi
           done

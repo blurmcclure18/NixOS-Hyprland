@@ -7,11 +7,12 @@
     ./hyprlock.nix
     ./hypridle.nix
     ./scripts
-    ./windowrules.nix
+#    ./windowrules.nix
   ];
 
  wayland.windowManager.hyprland = {
     enable = true;
+    configType = "hyprlang";
 
     settings = {
       
@@ -19,7 +20,7 @@
 
       exec-once = [
         "waybar"
-        "swww-daemon"
+        "awww-daemon"
         "hypridle"
       ];
 
@@ -91,7 +92,7 @@
       };
 
       dwindle = {
-        pseudotile = true;
+        #pseudotile = true;
         preserve_split = true;
       };
 
@@ -154,11 +155,11 @@
 
   };
   home.packages = with pkgs; [
+    awww
     cliphist
     hyprlock
     hypridle
     rofi
-    swww
     wallust
     waybar
     wl-clipboard

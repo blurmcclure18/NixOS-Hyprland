@@ -3,16 +3,16 @@
   wayland.windowManager.hyprland = {
 	settings = {
 		windowrule = [
-			"suppressevent maximize, class:.*"
-		        "nofocus,class:^$,title:^$,xwayland:1,floating:1,fullscreen:0,pinned:0"
-		        "tag +terminal, class:^(Alacritty)$"
-		        "opacity 0.95 0.8, tag:terminal*"
+			#"suppressevent maximize, class:.*"
+		        #"nofocus,class:^$,title:^$,xwayland:1,floating:1,fullscreen:0,pinned:0"
+		        #"tag +terminal, class:^(Alacritty)$"
+		        #"opacity 0.95 0.8, tag:terminal*"
 
 			# windowrule v2 move to workspace
-			"workspace 1, class:^([Ff]irefox|org.mozilla.firefox|[Ff]irefox-esr)$"
-			"workspace 2, class:^([Dd]iscord)$"
-			"workspace 3, class:^([Ss]team)$"
-			"workspace 4, class:^([Qq]utebrowser)$"
+			#"workspace 1, class:^([Ff]irefox|org.mozilla.firefox|[Ff]irefox-esr)$"
+			#"workspace 2, class:^([Dd]iscord)$"
+			#"workspace 3, class:^([Ss]team)$"
+			#"workspace 4, class:^([Qq]utebrowser)$"
 			
 			# windowrule v2 - float
 			"float, class:^(org.kde.polkit-kde-authentication-agent-1)$ "
@@ -74,16 +74,16 @@
 		];
 
 		layerrule = [
-			"unset,class:^([Rr]ofi)$"
-			"blur,class:^([Rr]ofi)$"
-			"ignorezero, <rofi>"
-			"blur, rofi"
+			#"unset,class:^([Rr]ofi)$"
+			#"blur,class:^([Rr]ofi)$"
+			#"ignorezero, <rofi>"
+			#"blur, rofi"
 			
-			"ignorezero, overview"
-			"blur, overview"
+			#"ignorezero, overview"
+			#"blur, overview"
 			
-			"ignorezero, <wlogout>"
-			"blur, wlogout"
+			#"ignorezero, <wlogout>"
+			#"blur, wlogout"
 		];
 	};
   };
