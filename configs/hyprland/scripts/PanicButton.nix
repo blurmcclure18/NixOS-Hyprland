@@ -45,7 +45,7 @@
 		
 		rm -rf curloutput.json # remove the curl output file as it is no longer needed
 		
-		nohup firefox "https://www.youtube.com/watch?v=$random_video_id&t=__DOLLAR__{start_time}s" >/dev/null 2>&1 &
+		nohup zen "https://www.youtube.com/watch?v=$random_video_id&t=__DOLLAR__{start_time}s" >/dev/null 2>&1 &
 		
 		# Wait for Firefox to finish loading the webpage
 		sleep 5  # Adjust sleep duration as needed

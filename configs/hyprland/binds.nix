@@ -5,7 +5,7 @@
     settings = {
 
       "$mainMod" = "ALT";
-      "$browser" = "app.zen_browser.zen";
+      "$browser" = "zen";
       "$terminal" = "ghostty";
       "$filemanager" = "nautilus";
       "$menu" = "rofi -show drun -modi drun,filebrowser,run,window";

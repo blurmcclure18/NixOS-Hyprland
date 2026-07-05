@@ -165,5 +165,6 @@
     wl-clipboard
     wlogout
     wlr-randr
+    wtype
   ];
 }
