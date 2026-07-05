@@ -9,8 +9,6 @@
       # Source Colors
       source $HOME/.config/hypr/wallust/wallust-hypridle.conf
 
-      lofi_link="https://www.youtube.com/watch?v=EWrX250Zhko"
-      
       sDIR="$HOME/.config/hypr/scripts"
       
       # Send Notification
@@ -46,9 +44,15 @@
       
       play_music() {
         notification "Now Playing:" "Lofi Girl"
-      
-        # Play the selected online music using mpv
+
+        lofi_beats="$HOME/Music/lofi_beats.mp3"
+
+        if [ -f $lofi_beats ]; then
+          mpv --volume=60 --loop-file=inf --start=$(shuf -i 0-35999 -n 1) $lofi_beats
+        else
+          # Play the selected online music using mpv
           mpv --vid=no "$lofi_link"
+        fi
       }
       
       main() {
