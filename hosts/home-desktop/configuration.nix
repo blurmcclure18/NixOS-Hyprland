@@ -36,7 +36,7 @@
 	glib
 	gocryptfs
 	itch
-	protonvpn-gui
+	proton-vpn
 	transmission_4-qt
 	unrar
 	# wineWowPackages.stable

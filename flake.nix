@@ -66,17 +66,6 @@
 					./hosts/home-desktop/hardware-configuration.nix
 					];
 			};
-
-			optiplex-nixos = lib.nixosSystem {
-				inherit system;
-				specialArgs = {inherit self unstable;};
-				modules = [
-					nix-flat
-					./hosts/optiplex-desktop/configuration.nix 
-					./hosts/optiplex-desktop/hardware-configuration.nix
-					];
-			};
-
 		};
 
 		homeConfigurations = {

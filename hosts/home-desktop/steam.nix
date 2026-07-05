@@ -39,17 +39,17 @@
     stdenv.cc.cc
     xdg-desktop-portal
     xdg-desktop-portal-gtk
-    xorg.libX11
-    xorg.libxcb
-    xorg.libXcomposite
-    xorg.libXcursor
-    xorg.libXdamage
-    xorg.libXext
-    xorg.libXfixes
-    xorg.libXi
-    xorg.libXrandr
-    xorg.libXrender
-    xorg.libXtst
+    #xorg.libX11
+    #xorg.libxcb
+    #xorg.libXcomposite
+    #xorg.libXcursor
+    #xorg.libXdamage
+    #xorg.libXext
+    #xorg.libXfixes
+    #xorg.libXi
+    #xorg.libXrandr
+    #xorg.libXrender
+    #xorg.libXtst
     zlib
   ];
 }
