@@ -5,5 +5,6 @@
    prismlauncher # 3rd party launcher for minecraft 
   ] ++ (with unstable; [
     jdk25
+    beyond-all-reason
   ]);
 }

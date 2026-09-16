@@ -49,10 +49,12 @@
     grim
     mediawriter
     nautilus
+    newt
     nwg-look
     obsidian
     omnissa-horizon-client
     remmina
+    rustdesk
     slurp
     #spotify-player
     swappy
