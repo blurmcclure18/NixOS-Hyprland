@@ -19,9 +19,9 @@
       "source" = "$HOME/.config/hypr/wallust/wallust-hyprland.conf";
 
       exec-once = [
-        "waybar"
         "awww-daemon"
         "hypridle"
+        "waybar"
       ];
 
       env = [

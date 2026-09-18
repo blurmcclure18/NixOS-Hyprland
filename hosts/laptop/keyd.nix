@@ -40,6 +40,15 @@
   
           u = "home";
           m = "end";
+
+          # Fn/Media functions
+          f1 = "volumemute";
+          f2 = "volumedown";
+          f3 = "volumeup";
+          f4 = "micmute";
+          f5 = "kbdillumtoggle";
+          f6 = "brightnessdown";
+          f7 = "brightnessup";
         };
       };
     };
