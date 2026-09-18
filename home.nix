@@ -54,7 +54,6 @@
     obsidian
     omnissa-horizon-client
     remmina
-    rustdesk
     slurp
     #spotify-player
     swappy

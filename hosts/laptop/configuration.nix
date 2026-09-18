@@ -4,6 +4,7 @@
     [ # Include the results of the hardware scan.
 	./hardware-configuration.nix
 	../home-desktop/steam.nix
+	../home-desktop/games.nix
 	../System_Configs
     ];
 
