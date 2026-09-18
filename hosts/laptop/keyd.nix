@@ -19,6 +19,10 @@
           k = "overloadt(control, k, 200)";
           l = "overloadt(shift, l, 200)";
           ";" = "overloadt(meta, ;, 200)";
+
+          # Swap Caps Lock and Escape
+          capslock = "esc";
+          esc = "capslock";
   
           # V: tap = v, hold = Layer 1
           v = "overloadt(v_layer, v, 200)";
