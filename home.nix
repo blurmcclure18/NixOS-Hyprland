@@ -55,11 +55,11 @@
     omnissa-horizon-client
     remmina
     slurp
-    #spotify-player
+    spotify-player
     swappy
     tokyonight-gtk-theme
     usbutils
-    ytui-music
+    youtube-tui
   ];
 
   home.sessionVariables = {

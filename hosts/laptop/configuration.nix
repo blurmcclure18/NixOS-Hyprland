@@ -3,6 +3,7 @@
   imports =
     [ # Include the results of the hardware scan.
 	./hardware-configuration.nix
+	./keyd.nix
 	../home-desktop/steam.nix
 	../home-desktop/games.nix
 	../System_Configs
