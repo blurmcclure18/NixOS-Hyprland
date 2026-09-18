@@ -1,4 +1,5 @@
 { config, lib, pkgs, unstable, self, ... }:
+
 {
   services.keyd = {
     enable = true;
@@ -39,4 +40,4 @@
       };
     };
   };
-};
+}
